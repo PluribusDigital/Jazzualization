@@ -52,6 +52,9 @@
 
     <script>
         var colors = d3.scale.category20();
+        var artifactTypes = ['', 'Use Case', 'Entity', 'Control', 'UI Pattern', 'Navigation', 'Key Screen']
+        var keywords = ['diagram', 'report', 'user', 'package:']
+
         var svg = d3.select(".view")
                     .append("g")
                     .call(d3.behavior.zoom().scaleExtent([.25, 8]).on("zoom", zoom))
@@ -144,9 +147,16 @@
         }
 
         function color(d) {
-            index = 0;
-            if (d.type == '')
-                index = 10;
+            index = artifactTypes.indexOf(d.type)
+            if (index < 1) {
+                var s = d.name.toLowerCase().split(" ");
+                for (var i = 0; i < s.length && index <= 0; i++) {
+                    index = keywords.indexOf(s[i])
+                }
+
+                index + artifactTypes.length
+            }
+
             return colors(index);
         }
 
