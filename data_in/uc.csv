@@ -1,0 +1,287 @@
+id,Name,Tags,Link From,Link To,Artifact Type
+2675,Generate GFE Announcement Letter,"","","7127: GFE Exam
+2692: Operator License Assistant
+2693: Approver",Use Case
+2677,Register Candidate for GFE,"GFE,OLTS","3164: Package: Prepare Candidates for GFE
+13276: Replacement RPS OLTS Use Case Diagram","7131: GFE Result
+14552: GFE Enrollment
+2692: Operator License Assistant
+2696: GFE Examination Staff",Use Case
+2678,Generate GFE Examiner Letter,"","3164: Package: Prepare Candidates for GFE
+13276: Replacement RPS OLTS Use Case Diagram","7131: GFE Result
+2692: Operator License Assistant",Use Case
+2679,Enter GFE Results,OLTS,"13276: Replacement RPS OLTS Use Case Diagram
+3165: Package: Record GFE Results","7131: GFE Result
+14529: GFE Examination Staff
+2692: Operator License Assistant
+14553: GFE Scoring",Use Case
+2680,Initiate Operator License Application,"OLTS,Partially Complete","13276: Replacement RPS OLTS Use Case Diagram
+3166: Package: Process Application","8332: Application Medical
+8339: Application Renewal
+8329: Applicant Experience
+14546: Operator Docket - Applications Tab
+8333: Application
+14547: Operator Docket - Qualifications Tab
+2692: Operator License Assistant
+8328: Applicant Position
+2695: Examination Staff
+8281: Applicant Training
+8326: Applicant Education",Use Case
+2681,Process Medical Results,OLTS,"13276: Replacement RPS OLTS Use Case Diagram
+3166: Package: Process Application","8332: Application Medical
+2692: Operator License Assistant
+14548: Operator Docket - Medical Tab
+2695: Examination Staff
+2697: Medical Review Officer",Use Case
+2682,Process Waivers,"Application,OLTS,Partially Complete","13276: Replacement RPS OLTS Use Case Diagram
+3166: Package: Process Application","8334: Application Waiver
+2692: Operator License Assistant
+2693: Approver
+2695: Examination Staff",Use Case
+2683,Enter Exam Results,OLTS,"13276: Replacement RPS OLTS Use Case Diagram
+3167: Package: Process Operating Exam","2692: Operator License Assistant
+2695: Examination Staff
+8338: Exam Result",Use Case
+2684,Manage Appeals,OLTS,"3168: Package: Manage Operations
+13276: Replacement RPS OLTS Use Case Diagram","14528: Operator Licensing Branch Staff
+2692: Operator License Assistant
+2693: Approver
+8343: Appeals",Use Case
+2685,Process Operator's Fitness for Duty,OLTS,"3168: Package: Manage Operations
+13276: Replacement RPS OLTS Use Case Diagram","8330: Applicant Fitness
+2692: Operator License Assistant
+2695: Examination Staff",Use Case
+2686,Process Terminations,OLTS,"3168: Package: Manage Operations
+13276: Replacement RPS OLTS Use Case Diagram","14550: Operator Docket - Licenses Tab
+8340: License Action
+8335: License
+2692: Operator License Assistant
+2693: Approver",Use Case
+2688,Manage Licenses,OLTS,"3169: Package: Issue License/Letter
+13276: Replacement RPS OLTS Use Case Diagram","8341: License Amended
+14550: Operator Docket - Licenses Tab
+8337: License Condition
+8340: License Action
+8335: License
+2692: Operator License Assistant
+2693: Approver",Use Case
+2689,View and Manage Facility Representative Information,OLTS,"3170: Package: Administer Systerm
+13276: Replacement RPS OLTS Use Case Diagram","3295: Site
+2692: Operator License Assistant
+2693: Approver
+2695: Examination Staff
+2696: GFE Examination Staff",Use Case
+2690,Create OLTS Reports,OLTS,"3170: Package: Administer Systerm
+13276: Replacement RPS OLTS Use Case Diagram
+3172: Package: Global Functions","14528: Operator Licensing Branch Staff
+2692: Operator License Assistant
+14554: Reports Index",Use Case
+2691,Perform Searches in OLTS,"Global,OLTS","3172: Package: Global Functions
+13276: Replacement RPS OLTS Use Case Diagram
+3170: Package: Administer Systerm","8327: Applicant
+14544: Applicants Index
+2692: Operator License Assistant
+2695: Examination Staff",Use Case
+3084,Generate Denial Letter,"Application,OLTS,Partially Complete","3168: Package: Manage Operations
+13276: Replacement RPS OLTS Use Case Diagram","2692: Operator License Assistant
+2695: Examination Staff
+8338: Exam Result",Use Case
+3114,Determine Inspection Scope,Plan,"3248: Replacement RPS Core Use Case Diagram
+3179: Package: Plan for Inspection",3156: Scheduler,Use Case
+3116,Manage Inspection Activity,"Partially Complete,Schedule","3248: Replacement RPS Core Use Case Diagram
+3179: Package: Plan for Inspection","3383: Procedure Activity
+3765: Copy Options Form
+3156: Scheduler
+3763: Bulk Edit Activity
+3766: Edit Activity
+3371: Inspection Activity",Use Case
+3118,Manage Non-Inspection Activities,"Partially Complete,Plan,Schedule","3248: Replacement RPS Core Use Case Diagram
+3179: Package: Plan for Inspection","3156: Scheduler
+3365: Non-Inspection Activity",Use Case
+3120,View Inspection Schedule,Schedule,"3181: Package: Manage Scheduling
+3248: Replacement RPS Core Use Case Diagram","3383: Procedure Activity
+3156: Scheduler
+3770: Scheduled Activities
+3771: Schedule Home",Use Case
+3121,Manage Schedule Conflicts,"Partially Complete,Schedule","3181: Package: Manage Scheduling
+3248: Replacement RPS Core Use Case Diagram","3383: Procedure Activity
+3768: Gantt Site Conflict
+3384: Staff Allocation
+3769: Gantt Staff Conflict
+3156: Scheduler
+3378: Branch
+3297: Staff",Use Case
+3122,Allocate Inspection Staff,"Partially Complete,Schedule","3181: Package: Manage Scheduling
+3248: Replacement RPS Core Use Case Diagram","3384: Staff Allocation
+3156: Scheduler
+3378: Branch
+3767: Gantt Assigned/Available Staff
+3297: Staff",Use Case
+3124,Enter Inspection Data,Inspect,"3182: Package: Record Inspection Data
+3248: Replacement RPS Core Use Case Diagram","3383: Procedure Activity
+3158: Inspector
+3760: Edit Inspection Report",Use Case
+3126,Verify Samples,"Completion,Partially Complete","3182: Package: Record Inspection Data
+3248: Replacement RPS Core Use Case Diagram","5955: Samples Completed Report
+3383: Procedure Activity
+3158: Inspector",Use Case
+3128,Compile Inspection Report,Completion,"3248: Replacement RPS Core Use Case Diagram
+3183: Pacakge: Prepare Reports","3684: Inspection Report Template
+3158: Inspector
+3375: Inspection Report
+3760: Edit Inspection Report",Use Case
+3129,Finalize and Distribute Inspection Report,Completion,"3248: Replacement RPS Core Use Case Diagram
+3183: Pacakge: Prepare Reports","3160: Approver
+3780: Reviewer
+7103: Review Inspection Report
+3781: Signature Authority
+3759: Approve Inspection Report
+3375: Inspection Report",Use Case
+3132,Perform Technical Review,"Oversight,ROE","3258: Replacement RPS (ROE/ROP/HFIS) Use Case Diagram
+3184: Package: Manage Events","3238: Technical Review Group
+5906: OpE Technical Review
+5793: TRG Review
+3175: Operations Experience Coordinator",Use Case
+3134,Manage Level 1 Screening,"Oversight,ROE","3258: Replacement RPS (ROE/ROP/HFIS) Use Case Diagram
+3184: Package: Manage Events","3238: Technical Review Group
+5679: OpE Data
+3175: Operations Experience Coordinator",Use Case
+3137,Generate Performance Indicator Data,"Oversight,ROP","3258: Replacement RPS (ROE/ROP/HFIS) Use Case Diagram
+3185: Package: Manage Assessments","3860: PI Data
+5674: Regional Offices
+5404: Enter Performance Indicator Data
+5673: Performance Indicator Lead",Use Case
+3139,Generate Follow-up Assesment Letter,"Oversight,Partially Complete,ROP",3185: Package: Manage Assessments,"5674: Regional Offices
+5405: Generate Assessment Follow-Up Letter
+3174: Performance Assessment Lead",Use Case
+3143,Search For Human Factors,"HFIS,Oversight,Partially Complete","3258: Replacement RPS (ROE/ROP/HFIS) Use Case Diagram
+3186: Package: Manage Human Performance","5705: Search For Human Factors
+3176: Human Factors Engineer
+5662: Human Factors
+3237: Psychologist",Use Case
+3146,Generate Annual Human Factors Report,"HFIS,Partially Complete","3258: Replacement RPS (ROE/ROP/HFIS) Use Case Diagram
+3186: Package: Manage Human Performance",3176: Human Factors Engineer,Use Case
+3147,Assess Public Reports For Human Factors,"HFIS,Oversight","3258: Replacement RPS (ROE/ROP/HFIS) Use Case Diagram
+3186: Package: Manage Human Performance","5711: Assess Public Human Factors Information
+3176: Human Factors Engineer
+5662: Human Factors
+3237: Psychologist",Use Case
+3148,Search for Activity,"Global,Partially Complete","3248: Replacement RPS Core Use Case Diagram
+3187: Package: Global","3383: Procedure Activity
+3365: Non-Inspection Activity
+3770: Scheduled Activities
+3188: -All-
+3371: Inspection Activity",Use Case
+3150,Generate RPS Reports,"Global,Partially Complete","3248: Replacement RPS Core Use Case Diagram
+3187: Package: Global",3188: -All-,Use Case
+3151,Manage Profiles,Global,"3248: Replacement RPS Core Use Case Diagram
+3187: Package: Global","5912: When FIlter Summary
+3333: Who Filter Summary
+3296: Profile
+3336: Where Filter Summary
+3334: What Filter - Inspection & Schedule
+3188: -All-",Use Case
+3190,Manage Reference Data,Setup,"3248: Replacement RPS Core Use Case Diagram
+3178: Package: Administer System","5903: Technical Review Group
+3159: Data Admin
+3374: Major Activity
+3758: Index Reference Tables
+5803: Human Factors Category",Use Case
+3192,Manage Inspection Reports,"Completion,Partially Complete","3183: Pacakge: Prepare Reports
+3248: Replacement RPS Core Use Case Diagram
+3183: Pacakge: Prepare Reports","3692: Procedure Summary
+3158: Inspector
+5957: Inspection Reports
+3375: Inspection Report",Use Case
+3193,Close Procedure/Report,"Completion,Partially Complete","3248: Replacement RPS Core Use Case Diagram
+3183: Pacakge: Prepare Reports","3383: Procedure Activity
+3375: Inspection Report",Use Case
+3253,Create Assessment Letter,"Completion,Partially Complete","3182: Package: Record Inspection Data
+3248: Replacement RPS Core Use Case Diagram","3682: Assessment Letter
+3158: Inspector",Use Case
+3372,Manage Manual Chapters,Setup,"3178: Package: Administer System
+3248: Replacement RPS Core Use Case Diagram","3159: Data Admin
+3852: Requestor
+3290: Inspection Manual Chapter",Use Case
+3724,Manage Inspection Cycles,"Partially Complete,Setup","3178: Package: Administer System
+3248: Replacement RPS Core Use Case Diagram","",Use Case
+5406,View Plant Performance,"Oversight,ROP","3258: Replacement RPS (ROE/ROP/HFIS) Use Case Diagram
+3185: Package: Manage Assessments","3682: Assessment Letter
+5731: Action Matrix
+3860: PI Data
+3678: Inspection Findings
+3174: Performance Assessment Lead
+3375: Inspection Report
+5673: Performance Indicator Lead",Use Case
+5413,Update Action Matrix,"Oversight,ROP","3258: Replacement RPS (ROE/ROP/HFIS) Use Case Diagram
+5600: Replacement RPS Oversight Use Case Diagram
+3185: Package: Manage Assessments","5731: Action Matrix
+3174: Performance Assessment Lead",Use Case
+5665,Generate Plant Issues Matrix,"Oversight,ROP","3258: Replacement RPS (ROE/ROP/HFIS) Use Case Diagram
+5600: Replacement RPS Oversight Use Case Diagram
+3185: Package: Manage Assessments",3174: Performance Assessment Lead,Use Case
+5667,Track Violation Notices,"Oversight,Partially Complete,ROP","3258: Replacement RPS (ROE/ROP/HFIS) Use Case Diagram
+5600: Replacement RPS Oversight Use Case Diagram
+3185: Package: Manage Assessments","5927: Enforcement Specialist
+3174: Performance Assessment Lead
+5410: Issue Notice Violation",Use Case
+5687,Perform Preliminary Screening,"Oversight,Partially Complete,ROE","3258: Replacement RPS (ROE/ROP/HFIS) Use Case Diagram
+3184: Package: Manage Events
+5600: Replacement RPS Oversight Use Case Diagram","5788: Clearinghouse Summary
+5679: OpE Data
+3175: Operations Experience Coordinator",Use Case
+5688,Compile and Publish OpE Trend Reports,"Oversight,ROE","3258: Replacement RPS (ROE/ROP/HFIS) Use Case Diagram
+3184: Package: Manage Events
+5600: Replacement RPS Oversight Use Case Diagram",3175: Operations Experience Coordinator,Use Case
+5904,Search for Events/Issues,"Oversight,Partially Complete,ROE","3258: Replacement RPS (ROE/ROP/HFIS) Use Case Diagram
+3184: Package: Manage Events","3238: Technical Review Group
+5689: Issue Manager
+5799: Search For OpE Data
+5675: OpE Event
+3173: Headquarters Operations Officer
+3175: Operations Experience Coordinator",Use Case
+5905,Manage Level 2 Screening,"Oversight,ROE","3258: Replacement RPS (ROE/ROP/HFIS) Use Case Diagram
+3184: Package: Manage Events","3238: Technical Review Group
+5689: Issue Manager
+5679: OpE Data",Use Case
+7128,Access OpE Screening Summary,"Partially Complete,ROE","3258: Replacement RPS (ROE/ROP/HFIS) Use Case Diagram
+3184: Package: Manage Events",3175: Operations Experience Coordinator,Use Case
+7129,Administer/Maintain Issue Tracking List,"Partially Complete,ROE","3258: Replacement RPS (ROE/ROP/HFIS) Use Case Diagram
+3184: Package: Manage Events","5679: OpE Data
+3175: Operations Experience Coordinator",Use Case
+7130,Generate Screening Summary Email,"Partially Complete,ROE","3258: Replacement RPS (ROE/ROP/HFIS) Use Case Diagram
+3184: Package: Manage Events",3175: Operations Experience Coordinator,Use Case
+8276,Create Change Notice,"Partially Complete,Setup","3248: Replacement RPS Core Use Case Diagram
+3178: Package: Administer System","3380: Change Notice
+3852: Requestor",Use Case
+13278,Update Operator Docket,OLTS,"3170: Package: Administer Systerm
+13276: Replacement RPS OLTS Use Case Diagram","8341: License Amended
+2692: Operator License Assistant
+2693: Approver",Use Case
+13287,Enter GFE Dates,"GFE,OLTS,Setup","13276: Replacement RPS OLTS Use Case Diagram
+14558: Administer GFE Dates","3159: Data Admin
+7127: GFE Exam",Use Case
+14540,View Notifications,"Global,OLTS,Partially Complete","3172: Package: Global Functions
+13276: Replacement RPS OLTS Use Case Diagram","14543: Home
+14521: Notification
+2692: Operator License Assistant",Use Case
+14541,View ADAMS Documents,"Global,OLTS,Partially Complete","3172: Package: Global Functions
+13276: Replacement RPS OLTS Use Case Diagram",2692: Operator License Assistant,Use Case
+14572,Manage OLTS Profiles,"Global,OLTS,Partially Complete","3172: Package: Global Functions
+13276: Replacement RPS OLTS Use Case Diagram","14528: Operator Licensing Branch Staff
+2692: Operator License Assistant
+2695: Examination Staff
+2696: GFE Examination Staff",Use Case
+14605,View Docket Notes,"Global,OLTS","3172: Package: Global Functions
+13276: Replacement RPS OLTS Use Case Diagram","14551: Operator Docket - Notes Tab
+13279: Notes
+2692: Operator License Assistant",Use Case
+14606,View Docket History,"Global,OLTS","3172: Package: Global Functions
+13276: Replacement RPS OLTS Use Case Diagram","14545: Operator Docket - History Tab
+2692: Operator License Assistant",Use Case
+14607,Initiate Blue Sheet Activities ,"","","",Use Case
+14608,View Licensee Application ,"","","",Use Case
+14609,Create Milestones ,"","","",Use Case
+14610,Document and Track Licensee Actions ,"","","",Use Case
+14611,Assign Green Sheet Reviewer,"","","",Use Case
+14612,Perform Green Sheet Review ,"","","",Use Case

@@ -1,0 +1,378 @@
+id,Reused Count,Name,Tags,Link From,Link To,Artifact Type
+3290,3,Inspection Manual Chapter,Setup,"3292: Procedure Reference
+3296: Profile
+3380: Change Notice
+3372: Manage Manual Chapters","3702: Auditing - Heavy
+3293: Inspection Manual Part Type
+3380: Change Notice",Entity
+3292,3,Procedure Reference,Setup,"3383: Procedure Activity
+3109: Manage Inspection Procedures
+3296: Profile
+3380: Change Notice","3374: Major Activity
+3691: Procedure Summary Template
+3386: Cycle Type
+3301: Office
+3702: Auditing - Heavy
+3380: Change Notice
+3344: Procedure Type
+3346: Docket Category
+3290: Inspection Manual Chapter
+3675: Phase Code",Entity
+3293,3,Inspection Manual Part Type,Reference Data,3290: Inspection Manual Chapter,3700: Auditing - Minimal,Entity
+3295,3,Site,Reference Data,"2689: View and Manage Facility Representative Information
+3298: Docket
+8329: Applicant Experience
+7131: GFE Result
+3296: Profile
+14521: Notification
+3297: Staff",3700: Auditing - Minimal,Entity
+3296,3,Profile,Setup,"3151: Manage Profiles
+3332: Profile Control Summary","3300: Region
+3376: Division
+3298: Docket
+3374: Major Activity
+3386: Cycle Type
+3345: Profile Type
+3295: Site
+3292: Procedure Reference
+3301: Office
+3700: Auditing - Minimal
+3366: Docket Type
+3346: Docket Category
+3378: Branch
+3290: Inspection Manual Chapter
+3297: Staff
+3675: Phase Code",Entity
+3297,3,Staff,Reference Data,"3122: Allocate Inspection Staff
+3337: Manage Feedback Form
+3384: Staff Allocation
+3860: PI Data
+5675: OpE Event
+5662: Human Factors
+3296: Profile
+3365: Non-Inspection Activity
+3380: Change Notice
+3759: Approve Inspection Report
+3375: Inspection Report
+3378: Branch
+3121: Manage Schedule Conflicts","3300: Region
+3295: Site
+3701: Auditing - Moderate
+3378: Branch",Entity
+3298,3,Docket,Reference Data,"8336: Exam
+3860: PI Data
+5675: OpE Event
+5662: Human Factors
+3296: Profile
+8333: Application
+5679: OpE Data
+8335: License
+14521: Notification
+3678: Inspection Findings
+5410: Issue Notice Violation","3295: Site
+3689: Facility Licensee
+3702: Auditing - Heavy
+3366: Docket Type
+3346: Docket Category
+3675: Phase Code",Entity
+3301,3,Office,Reference Data,"3376: Division
+3292: Procedure Reference
+3296: Profile","3376: Division
+3700: Auditing - Minimal",Entity
+3365,3,Non-Inspection Activity,Inspect,"3148: Search for Activity
+3118: Manage Non-Inspection Activities","3700: Auditing - Minimal
+3323: Activity Type
+3297: Staff",Entity
+3370,3,Inspection Cycle,Reference Data,3383: Procedure Activity,"3386: Cycle Type
+3700: Auditing - Minimal",Entity
+3371,3,Inspection Activity,Schedule,"3383: Procedure Activity
+3116: Manage Inspection Activity
+3148: Search for Activity","3383: Procedure Activity
+3374: Major Activity
+3384: Staff Allocation
+3701: Auditing - Moderate
+3375: Inspection Report",Entity
+3374,3,Major Activity,Reference Data,"3292: Procedure Reference
+3296: Profile
+3190: Manage Reference Data
+3371: Inspection Activity",3700: Auditing - Minimal,Entity
+3375,3,Inspection Report,Completion,"3193: Close Procedure/Report
+3383: Procedure Activity
+3692: Procedure Summary
+3128: Compile Inspection Report
+3129: Finalize and Distribute Inspection Report
+3192: Manage Inspection Reports
+5406: View Plant Performance
+3371: Inspection Activity","3383: Procedure Activity
+3683: Inspection Type
+3684: Inspection Report Template
+3701: Auditing - Moderate
+3678: Inspection Findings
+3718: Document Status
+3725: Sunsi
+3297: Staff",Entity
+3376,3,Division,Reference Data,"3301: Office
+3296: Profile
+3378: Branch","3301: Office
+3700: Auditing - Minimal
+3378: Branch",Entity
+3378,3,Branch,Reference Data,"3122: Allocate Inspection Staff
+3376: Division
+3296: Profile
+3759: Approve Inspection Report
+3121: Manage Schedule Conflicts
+3297: Staff","3376: Division
+3700: Auditing - Minimal
+3297: Staff",Entity
+3379,3,Role,Reference Data,3674: User,3701: Auditing - Moderate,Entity
+3380,3,Change Notice,Setup,"8276: Create Change Notice
+3292: Procedure Reference
+3290: Inspection Manual Chapter","3292: Procedure Reference
+3702: Auditing - Heavy
+3718: Document Status
+3290: Inspection Manual Chapter
+3297: Staff",Entity
+3383,3,Procedure Activity,Inspect,"3193: Close Procedure/Report
+3384: Staff Allocation
+3120: View Inspection Schedule
+3124: Enter Inspection Data
+3116: Manage Inspection Activity
+3678: Inspection Findings
+3375: Inspection Report
+3126: Verify Samples
+3121: Manage Schedule Conflicts
+3148: Search for Activity
+3371: Inspection Activity","3692: Procedure Summary
+3384: Staff Allocation
+3370: Inspection Cycle
+3292: Procedure Reference
+3701: Auditing - Moderate
+3690: Completion Status
+3375: Inspection Report
+3371: Inspection Activity",Entity
+3384,3,Staff Allocation,Schedule,"3383: Procedure Activity
+3122: Allocate Inspection Staff
+3121: Manage Schedule Conflicts
+3371: Inspection Activity","3383: Procedure Activity
+3700: Auditing - Minimal
+3297: Staff",Entity
+3674,1,User,Reference Data,14521: Notification,3379: Role,Entity
+3678,3,Inspection Findings,Oversight,"3125: Enter Inspection Findings/Violations
+5406: View Plant Performance
+3375: Inspection Report
+5410: Issue Notice Violation","3383: Procedure Activity
+3298: Docket
+3702: Auditing - Heavy
+3679: Issue Type
+3680: Cornerstone
+3718: Document Status
+3681: SDP Risk Assessment",Entity
+3682,3,Assessment Letter,Completion,"5406: View Plant Performance
+3253: Create Assessment Letter",3701: Auditing - Moderate,Entity
+3684,3,Inspection Report Template,Reference Data,"3128: Compile Inspection Report
+3375: Inspection Report","3683: Inspection Type
+3366: Docket Type",Entity
+3689,3,Facility Licensee,Reference Data,"3298: Docket
+5675: OpE Event",3700: Auditing - Minimal,Entity
+3691,3,Procedure Summary Template,Reference Data,3292: Procedure Reference,3700: Auditing - Minimal,Entity
+3692,3,Procedure Summary,Completion,"3383: Procedure Activity
+3192: Manage Inspection Reports",3375: Inspection Report,Entity
+3860,4,PI Data,Oversight,"3137: Generate Performance Indicator Data
+5406: View Plant Performance","3298: Docket
+3702: Auditing - Heavy
+5797: Performance Indicator
+3297: Staff",Entity
+5410,2,Issue Notice Violation,Oversight,5667: Track Violation Notices,"3298: Docket
+3702: Auditing - Heavy
+3679: Issue Type
+3678: Inspection Findings
+5411: Severity Level
+5916: Cross Cutting Area
+3681: SDP Risk Assessment",Entity
+5662,3,Human Factors,Oversight,"3143: Search For Human Factors
+3147: Assess Public Reports For Human Factors
+5682: Human Factors TRG","5805: Human Factors Detail
+3298: Docket
+3701: Auditing - Moderate
+5804: Human Factors Area
+3297: Staff",Entity
+5675,2,OpE Event,Oversight,"5904: Search for Events/Issues
+5679: OpE Data
+5908: Plant Status (System Interface)","5677: Scram Type
+3298: Docket
+3689: Facility Licensee
+3702: Auditing - Heavy
+5678: Event Type
+3297: Staff",Entity
+5679,2,OpE Data,Oversight,"5906: OpE Technical Review
+5687: Perform Preliminary Screening
+5905: Manage Level 2 Screening
+3134: Manage Level 1 Screening
+7129: Administer/Maintain Issue Tracking List","5902: Issue Source
+3298: Docket
+5906: OpE Technical Review
+5782: Issue Category
+5675: OpE Event
+3702: Auditing - Heavy
+5681: Disposition
+5781: Issue Status",Entity
+5682,3,Human Factors TRG,Oversight,3145: Generate TRG (Technical Review Group) Report,"5662: Human Factors
+3701: Auditing - Moderate",Entity
+5731,3,Action Matrix,"Oversight,ROP","5406: View Plant Performance
+5413: Update Action Matrix","3702: Auditing - Heavy
+5802: Time Span
+5806: Action Matrix Response",Entity
+5797,3,Performance Indicator,"Oversight,Reference Data","3860: PI Data
+5801: PI Threshold","3700: Auditing - Minimal
+3680: Cornerstone",Entity
+5801,3,PI Threshold,"Oversight,Reference Data","","5797: Performance Indicator
+3700: Auditing - Minimal",Entity
+5802,3,Time Span,"Oversight,ROP,Reference Data",5731: Action Matrix,3700: Auditing - Minimal,Entity
+5803,2,Human Factors Category,"Oversight,Reference Data","3190: Manage Reference Data
+5804: Human Factors Area",3700: Auditing - Minimal,Entity
+5804,2,Human Factors Area,"Oversight,Reference Data","5805: Human Factors Detail
+5662: Human Factors",5803: Human Factors Category,Entity
+5805,2,Human Factors Detail,"HFIS,Oversight,Reference Data",5662: Human Factors,"3700: Auditing - Minimal
+5804: Human Factors Area",Entity
+5902,2,Issue Source,"Oversight,ROE,Reference Data",5679: OpE Data,3700: Auditing - Minimal,Entity
+5906,2,OpE Technical Review,"Oversight,ROE","5679: OpE Data
+3132: Perform Technical Review","5903: Technical Review Group
+5907: Priority
+3701: Auditing - Moderate
+5679: OpE Data",Entity
+7127,1,GFE Exam,OLTS,"2675: Generate GFE Announcement Letter
+13287: Enter GFE Dates",3700: Auditing - Minimal,Entity
+7131,1,GFE Result,OLTS,"2678: Generate GFE Examiner Letter
+2679: Enter GFE Results
+2677: Register Candidate for GFE","8327: Applicant
+3295: Site
+13279: Notes
+3700: Auditing - Minimal
+8404: Exam Result Type
+3346: Docket Category",Entity
+8281,1,Applicant Training,OLTS,2680: Initiate Operator License Application,"8327: Applicant
+3700: Auditing - Minimal
+8397: Training Type",Entity
+8326,1,Applicant Education,OLTS,2680: Initiate Operator License Application,"8327: Applicant
+3700: Auditing - Minimal
+8398: Degree Type
+8399: Schools",Entity
+8327,1,Applicant,OLTS,"8329: Applicant Experience
+7131: GFE Result
+8333: Application
+8330: Applicant Fitness
+8331: Applicant Control Manipulation
+8335: License
+14521: Notification
+2691: Perform Searches in OLTS
+8328: Applicant Position
+8343: Appeals
+8281: Applicant Training
+8326: Applicant Education
+8338: Exam Result","13279: Notes
+3701: Auditing - Moderate
+13277: Address",Entity
+8328,1,Applicant Position,OLTS,2680: Initiate Operator License Application,"8327: Applicant
+13279: Notes
+3700: Auditing - Minimal
+13277: Address
+8400: Positions",Entity
+8329,1,Applicant Experience,OLTS,2680: Initiate Operator License Application,"8327: Applicant
+3295: Site
+3700: Auditing - Minimal",Entity
+8330,1,Applicant Fitness,OLTS,2685: Process Operator's Fitness for Duty,"8327: Applicant
+8402: Substance Type
+3700: Auditing - Minimal
+8401: Disposition Type",Entity
+8331,1,Applicant Control Manipulation,OLTS,"","8327: Applicant
+3700: Auditing - Minimal",Entity
+8332,1,Application Medical,OLTS,"2680: Initiate Operator License Application
+2681: Process Medical Results","13279: Notes
+8333: Application
+3701: Auditing - Moderate
+8411: Medical Restriction Type",Entity
+8333,1,Application,OLTS,"8332: Application Medical
+8339: Application Renewal
+8334: Application Waiver
+2680: Initiate Operator License Application","8327: Applicant
+8405: License Type
+3298: Docket
+8403: Application Type
+13279: Notes
+3701: Auditing - Moderate
+13277: Address
+8400: Positions",Entity
+8334,1,Application Waiver,OLTS,2682: Process Waivers,"8412: Waiver Type
+13279: Notes
+8333: Application
+3701: Auditing - Moderate
+8415: Waiver Result Type
+8414: Waiver Category",Entity
+8335,1,License,OLTS,"8341: License Amended
+8337: License Condition
+2686: Process Terminations
+8340: License Action
+2688: Manage Licenses","13286: License Status Type
+8327: Applicant
+8405: License Type
+3298: Docket
+13279: Notes
+3702: Auditing - Heavy
+13277: Address
+8406: License Result Type",Entity
+8336,1,Exam,OLTS,"8343: Appeals
+8338: Exam Result","3298: Docket
+3700: Auditing - Minimal
+8396: Exam Type",Entity
+8337,1,License Condition,OLTS,2688: Manage Licenses,"3701: Auditing - Moderate
+8335: License
+8408: License Condition Type",Entity
+8338,1,Exam Result,OLTS,"2683: Enter Exam Results
+3084: Generate Denial Letter","8336: Exam
+8327: Applicant
+3700: Auditing - Minimal
+8404: Exam Result Type",Entity
+8339,1,Application Renewal,OLTS,2680: Initiate Operator License Application,"3700: Auditing - Minimal
+8333: Application
+8404: Exam Result Type",Entity
+8340,1,License Action,OLTS,"2686: Process Terminations
+2688: Manage Licenses","8407: License Action Type
+3701: Auditing - Moderate
+8335: License",Entity
+8341,1,License Amended,OLTS,"13278: Update Operator Docket
+2688: Manage Licenses","3701: Auditing - Moderate
+8335: License
+8409: License Amendment Type",Entity
+8343,1,Appeals,OLTS,2684: Manage Appeals,"8336: Exam
+8327: Applicant
+3701: Auditing - Moderate",Entity
+8399,1,Schools,"OLTS,Reference Data",8326: Applicant Education,3700: Auditing - Minimal,Entity
+8408,1,License Condition Type,"OLTS,Reference Data","8337: License Condition
+8410: License Condition Amendment Map",3700: Auditing - Minimal,Entity
+8409,1,License Amendment Type,"OLTS,Reference Data","8341: License Amended
+8410: License Condition Amendment Map",3700: Auditing - Minimal,Entity
+8410,1,License Condition Amendment Map,"OLTS,Reference Data","","3700: Auditing - Minimal
+8408: License Condition Type
+8409: License Amendment Type",Entity
+8411,1,Medical Restriction Type,OLTS,8332: Application Medical,3700: Auditing - Minimal,Entity
+8414,1,Waiver Category,"OLTS,Reference Data",8334: Application Waiver,"8412: Waiver Type
+3700: Auditing - Minimal",Entity
+13277,1,Address,OLTS,"8327: Applicant
+8333: Application
+8335: License
+8328: Applicant Position",3700: Auditing - Minimal,Entity
+13279,1,Notes,OLTS,"8327: Applicant
+14605: View Docket Notes
+8332: Application Medical
+7131: GFE Result
+8333: Application
+8334: Application Waiver
+8335: License
+8328: Applicant Position","",Entity
+14521,1,Notification,OLTS,14540: View Notifications,"8327: Applicant
+3300: Region
+14522: Notification Category
+3298: Docket
+3295: Site
+3700: Auditing - Minimal
+3674: User",Entity

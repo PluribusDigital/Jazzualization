@@ -1,0 +1,117 @@
+id,Name,Artifact Type,Tags,Embeds,Link From,Status
+3227,Controls Summary,Control,"","","",Approved
+3331,Data Table Summary,Control,"",3717: datatable.png,"",Approved
+3332,Profile Control Summary,Control,"","3707: BasicLayout_8.png
+3704: ManageProfilesAccordion.png","",Approved
+3333,Who Filter Summary,Control,"",3325: Control - Who Filter,3151: Manage Profiles,Approved
+3334,What Filter - Inspection & Schedule,Control,"",3326: Control - What Filter - Inspection,3151: Manage Profiles,Approved
+3336,Where Filter Summary,Control,"",3324: Control - Where Filter,3151: Manage Profiles,Approved
+3358,Rich Text Editor,Control,Completion,3772: InspectionReportSection.png,"",Approved
+3359,Gantt Availability Summary,Control,"",3774: GanttChart.png,"",Approved
+3363,Burndown Percentage Summary,Control,"",3773: BurndownPercentage.png,"",Approved
+3364,Expandable Data Card Summary,Control,"",3799: ExpandableDataCard.png,"",Approved
+3778,Basic Controls,Control,"","3821: BasicControls-TextBox.png
+3822: BasicControls-Tabs.png
+3823: BasicControls-SearchBox.png
+3824: BasicControls-RadioButton.png
+3825: BasicControls-MultiLineTextArea.png
+3827: BasicControls-ListBox.png
+3828: BasicControls-Help.png
+3829: BasicControls-DropDown.png
+3830: BasicControls-DateTime.png
+3831: BasicControls-CheckBox.png
+3820: BasicControls-TextBoxRO.png","",Approved
+5717,Significance Determination Control Summary,Control,"Oversight,ROP",5718: SDP Control.png,"",Approved
+5719,Action Matrix Control (Point in Time) Summary,Control,"",5720: action matrix (point in time),"",Approved
+5736,Action Matrix Control (Time Range) Summary,Control,Oversight,5740: Action Matrix (Time Range),"",Approved
+5738,Performance Indicator Detail Summary,Control,"",5741: Performance Indicator Detail.gif,"",Approved
+5912,When FIlter Summary,Control,"",5910: Control - When Filter,3151: Manage Profiles,Approved
+3313,Index Summary,UI Pattern,"",3832: Index Pattern.png,"",Approved
+3314,Minor Index Summary,UI Pattern,"",3835: Minor Index Pattern.png,"",Approved
+3315,Detail Summary,UI Pattern,"",3817: Detail Screen,"",Approved
+3316,Gantt Chart Summary,UI Pattern,"",3841: Gantt Chart Pattern.png,"",Approved
+3317,Progress Chart Summary,UI Pattern,"",3842: Burndown Chart Pattern.png,"",Approved
+3328,Website Publish Approval Summary,UI Pattern,"",7039: Website Publish,"",Approved
+3329,Single Select Summary,UI Pattern,"",3839: Single Select Pattern.png,"",Approved
+3330,Select Multiple Summary,UI Pattern,"",3840: Multiple Select Pattern.png,"",Approved
+3343,Workflow Summary,UI Pattern,"",3843: Workflow Pattern.png,"",Approved
+5790,Advanced Search,UI Pattern,"","","5912: When FIlter Summary
+3333: Who Filter Summary
+3336: Where Filter Summary
+3334: What Filter - Inspection & Schedule",Approved
+5748,Navigation Summary,Navigation,"",8280: Navbar-all.png,"",Approved
+5809,Public ROP Navigation Structure,Navigation,"","","",Approved
+5810,Public ROE Navigation Structure,Navigation,"","","",Approved
+8300,Inspection Navigation Map Summary,Navigation,"Completion,Inspect,Schedule",8302: Inspection Map,"",Approved
+8301,Plant Assessment Map Summary,Navigation,"Oversight,ROP",8310: Plant Assessment Map,"",Approved
+8303,Clearinghouse Navigation Map Summary,Navigation,"Oversight,ROE",8307: Clearinghouse Map,"",Approved
+8304,Human Factors Navigation Map Summary,Navigation,"HFIS,Oversight",8309: Human Factors Map,"",Approved
+8305,Operator Licensing Navigation Map Summary,Navigation,OLTS,14524: OLTS Navigation Map,"",Under Review
+8306,Data Administration Navigation Map Summary,Navigation,Setup,8308: Data Administration Map,"",Approved
+3758,Index Reference Tables,Key Screen,Setup,3846: Manage Reference Data.png,"8306: Data Administration Navigation Map Summary
+3190: Manage Reference Data",Approved
+3759,Approve Inspection Report,Key Screen,Completion,8260: wrkflow-apprv.png,"8300: Inspection Navigation Map Summary
+3129: Finalize and Distribute Inspection Report",Approved
+3760,Edit Inspection Report,Key Screen,Inspect,3743: IR_Detail.png,"3128: Compile Inspection Report
+8300: Inspection Navigation Map Summary
+3124: Enter Inspection Data",Approved
+3761,Inspection Home,Key Screen,"Completion,Inspect",3812: InspectionHome.png,8300: Inspection Navigation Map Summary,Approved
+3762,Edit Finding,Key Screen,Inspect,3744: Edit Inspection Finding.png,"8300: Inspection Navigation Map Summary
+3125: Enter Inspection Findings/Violations",Approved
+3763,Bulk Edit Activity,Key Screen,Schedule,3746: BulkEditActivities.png,"8300: Inspection Navigation Map Summary
+3116: Manage Inspection Activity
+3770: Scheduled Activities",Approved
+3765,Copy Options Form,Key Screen,Schedule,5909: CopyOptionsFlow.png,"8300: Inspection Navigation Map Summary
+3116: Manage Inspection Activity
+3770: Scheduled Activities",Approved
+3766,Edit Activity,Key Screen,Schedule,3748: ManageSchedule-AddActivity.png,"8300: Inspection Navigation Map Summary
+3116: Manage Inspection Activity
+3770: Scheduled Activities",Approved
+3767,Gantt Assigned/Available Staff,Key Screen,Schedule,3749: ManageSchedule-AddForm-Staff.png,"3122: Allocate Inspection Staff
+8300: Inspection Navigation Map Summary",Approved
+3768,Gantt Site Conflict,Key Screen,Schedule,3751: ManageSchedule-AddActivity_SiteConflicts.png,"8300: Inspection Navigation Map Summary
+3121: Manage Schedule Conflicts",Approved
+3769,Gantt Staff Conflict,Key Screen,Schedule,3752: ManageSchedule-AddActivity_Conflicts.png,"8300: Inspection Navigation Map Summary
+3121: Manage Schedule Conflicts",Approved
+3770,Scheduled Activities,Key Screen,Schedule,3753: ManageSchedule-ScheduledTab.png,"8300: Inspection Navigation Map Summary
+3120: View Inspection Schedule
+3148: Search for Activity",Approved
+3771,Schedule Home,Key Screen,Schedule,3801: ManageSchedule-Home.png,3120: View Inspection Schedule,Approved
+5404,Enter Performance Indicator Data,Key Screen,"Oversight,ROP",5401: Enter PI Data.png,"3137: Generate Performance Indicator Data
+8301: Plant Assessment Map Summary",Approved
+5405,Generate Assessment Follow-Up Letter,Key Screen,"Oversight,ROP",5400: follow up rop.png,"3139: Generate Follow-up Assesment Letter
+8301: Plant Assessment Map Summary",Approved
+5705,Search For Human Factors,Key Screen,"HFIS,Oversight",7063: search for Humanfactors.png,"3143: Search For Human Factors
+8304: Human Factors Navigation Map Summary",Approved
+5707,Generate TRG Report,Key Screen,"HFIS,Oversight",7062: Generate TRG HF.png,"3145: Generate TRG (Technical Review Group) Report
+8304: Human Factors Navigation Map Summary",Approved
+5711,Assess Public Human Factors Information,Key Screen,"HFIS,Oversight","5771: Assess public HF.png
+5774: Assess public HF with Pop-Out.png","3147: Assess Public Reports For Human Factors
+8304: Human Factors Navigation Map Summary",Approved
+5788,Clearinghouse Summary,Key Screen,"Oversight,ROE",5787: Clearinghouse.png,"5687: Perform Preliminary Screening
+8303: Clearinghouse Navigation Map Summary",Approved
+5793,TRG Review,Key Screen,"Oversight,ROE",5794: TRG Review.png,"8303: Clearinghouse Navigation Map Summary
+3132: Perform Technical Review",Approved
+5799,Search For OpE Data,Key Screen,"Oversight,ROE",7061: Search ROE Events.png,"5904: Search for Events/Issues
+8303: Clearinghouse Navigation Map Summary",Approved
+5946,Index of Findings,Key Screen,"Inspect,Oversight",5917: List of Inspection Findings,8300: Inspection Navigation Map Summary,Approved
+5955,Samples Completed Report,Key Screen,Completion,7059: samples report.png,"8300: Inspection Navigation Map Summary
+3126: Verify Samples",Approved
+5957,Inspection Reports,Key Screen,"Completion,Inspect",8289: reports dashboard.png,"8300: Inspection Navigation Map Summary
+3192: Manage Inspection Reports",Approved
+7103,Review Inspection Report,Key Screen,Completion,8259: wrkflw-review.png,"8300: Inspection Navigation Map Summary
+3129: Finalize and Distribute Inspection Report",Approved
+14543,Home,Key Screen,OLTS,14556: OLTS Home,14540: View Notifications,Under Review
+14544,Applicants Index,Key Screen,OLTS,14557: Applicants Index,2691: Perform Searches in OLTS,Under Review
+14545,Operator Docket - History Tab,Key Screen,OLTS,14560: Docket - History Tab,14606: View Docket History,Under Review
+14546,Operator Docket - Applications Tab,Key Screen,OLTS,14561: Docket - Application Tab,2680: Initiate Operator License Application,Under Review
+14547,Operator Docket - Qualifications Tab,Key Screen,OLTS,14562: Docket - QualificationsTab,2680: Initiate Operator License Application,Under Review
+14548,Operator Docket - Medical Tab,Key Screen,OLTS,14563: Docket - Medical Tab,2681: Process Medical Results,Under Review
+14549,Operator Docket - Examinations Tab,Key Screen,OLTS,14564: Docket - Examinations Tab,"",Under Review
+14550,Operator Docket - Licenses Tab,Key Screen,OLTS,14565: Docket - License Tab,"2686: Process Terminations
+2688: Manage Licenses",Under Review
+14551,Operator Docket - Notes Tab,Key Screen,OLTS,14566: Docket - Notes Tab,14605: View Docket Notes,Under Review
+14552,GFE Enrollment,Key Screen,OLTS,14567: GFE Enroll,2677: Register Candidate for GFE,Under Review
+14553,GFE Scoring,Key Screen,OLTS,14568: GFE Score,2679: Enter GFE Results,Under Review
+14554,Reports Index,Key Screen,OLTS,14569: Reports,2690: Create OLTS Reports,Under Review
+14555,Licenses Due (Report 11),Key Screen,OLTS,14570: Licenses Due,"",Under Review
