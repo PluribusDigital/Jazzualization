@@ -4,47 +4,16 @@ import csv
 import json
 import argparse
 import codecs
+from transform_use_cases import safeRead, atomizeTags, atomizeLinks, queueUpstreamLinks, queueDownstreamLinks
 
-DEFAULT_INPUT_FILE = r'..\..\data_in\uc.csv'
-DEFAULT_OUTPUT_FILE = r'..\..\app\data\uc.json'
+DEFAULT_INPUT_FILE = r'..\..\data_in\ui.csv'
+DEFAULT_OUTPUT_FILE = r'..\..\app\data\ui.json'
 
-#-------------------------------------------------------------------------------
-# Base-Class Candidate Routines
-#-------------------------------------------------------------------------------
-
-def safeRead(d, key):
-    return d[key] if key in d else ''
-
-def atomizeTags(tags):
-    return [t.strip() for t in tags.split(',')] if len(tags) != 0 else []
-
-def atomizeLinks(s):
-    return [l.strip() for l in s.split('\n')] if len(s) != 0 else []
-
-def queueUpstreamLinks(queue, row, linkType):
-    for l in atomizeLinks(safeRead(row, linkType)):
-        source, name = l.split(':', 1)
-        queue.append({
-            'source': int(source),
-            'target': int(row['id']),
-            'name': name.strip(),
-            'type': linkType.strip()
-            })
-
-def queueDownstreamLinks(queue, row, linkType):
-    for l in atomizeLinks(safeRead(row, linkType)):
-        target, name = l.split(':', 1)
-        queue.append({
-            'source': int(row['id']),
-            'target': int(target),
-            'name': name.strip(),
-            'type': linkType.strip()
-            })
 #-------------------------------------------------------------------------------
 # Class
 #-------------------------------------------------------------------------------
 
-class TransformUseCase:
+class TransformUserInterface:
     def __init__(self):
         self.nodes = {}
         self.links = []
@@ -55,7 +24,6 @@ class TransformUseCase:
             (k,v) = self.mapNode(row)
             self.nodes[k] = v
             queueUpstreamLinks(self.linkQueue, row, 'Link From')
-            queueDownstreamLinks(self.linkQueue, row, 'Link To')
                     
         for l in self.linkQueue:
             self.links.append(self.linkProjection(l))
@@ -99,7 +67,7 @@ def transform(inName, outName):
     fIn = codecs.open(inName, 'r', encoding='utf-8')
     fOut = codecs.open(outName, 'w', encoding='utf-8')
     try:
-        pipeline = TransformUseCase()
+        pipeline = TransformUserInterface()
         pipeline.run(fIn)
         pipeline.save(fOut)
     finally:
