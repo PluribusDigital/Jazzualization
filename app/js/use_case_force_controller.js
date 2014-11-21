@@ -27,6 +27,7 @@ function dragstart(d) {
                */
               $scope.artifactTypes = ['Use Case', 'Entity', 'Control', 'UI Pattern', 'Navigation', 'Key Screen', 'Actor', 'Role', 'Interface']
               $scope.keywords = ['diagram', 'report', 'user', 'package:', 'auditing']
+              $scope.tags = ['Application', 'Completion', 'Enumeration', 'Global', 'Inspect', 'Schedule', 'HFIS', 'Oversight', 'OLTS', 'Partially Complete', 'Plan', 'Reference Data', 'ROE', 'ROP', 'Setup']
 
               $scope.width = Math.max(document.getElementById('view').offsetWidth, 960);
               $scope.height = optimalHeight();
@@ -37,7 +38,8 @@ function dragstart(d) {
               $scope.nodes = [];
               $scope.links = [];
 
-              $scope.filterArtifactTypes = [];//$scope.artifactTypes.slice(0);
+              $scope.filterArtifactTypes = [];
+              $scope.filterTags = [];
 
               /************************************************************************************************
                * d3js Properties
@@ -129,13 +131,15 @@ function dragstart(d) {
               }
 
               $scope.resetFilters = function () {
-                  // Reset the filters
                   $scope.filterArtifactTypes.splice(0, $scope.filterArtifactTypes.length);
+                  $scope.filterTags.splice(0, $scope.filterTags.length);
               }
 
               $scope.onModelLoaded = function (data) {
                   $scope.nodes = data.nodes.slice();
                   $scope.links = data.links.slice();
+
+                  // TODO: Dynamically build list of tags
 
                   // Update some settings based on the size of the data set
                   $scope.radius = Math.max(Math.sqrt($scope.width * $scope.height) / ($scope.nodes.length * 2), $scope.radius);
@@ -153,13 +157,20 @@ function dragstart(d) {
                   n0.splice(0, n0.length);
 
                   // Prepare the filtering information
-                  var filtersExist = $scope.filterArtifactTypes.length > 0;
+                  var filtersExist = $scope.filterArtifactTypes.length > 0 ||
+                                     $scope.filterTags.length > 0;
 
                   // Add the filtered nodes
                   for (var n = 0; n < $scope.nodes.length; n++) {
                       if (filtersExist) {
                           var typeIndex = $scope.filterArtifactTypes.indexOf($scope.nodes[n].type);
-                          $scope.nodes[n].show = typeIndex >= 0;
+
+                          var tagIndex = -1;
+                          for (var nt = 0; nt < $scope.nodes[n].tags.length && tagIndex <= 0; nt++) {
+                              tagIndex = $scope.filterTags.indexOf($scope.nodes[n].tags[nt])
+                          }
+
+                          $scope.nodes[n].show = (typeIndex >= 0 || tagIndex >= 0);
                       }
                       else {
                           $scope.nodes[n].show = true;

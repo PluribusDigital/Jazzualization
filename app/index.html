@@ -45,16 +45,28 @@
         <div id="filterCollapse" class="panel-collapse collapse popover bottom" role="tooltip" style="top: 34px; left: 80%;">
             <div class="arrow" style="left: 72.8204257246377%;"></div>
             <div class="panel-heading">Filters</div>
-            <div class="panel-body" style="width: 300px;">
-                <div class="form-group">
-                    <label for="filterArtifacts">Artifacts</label>
-                    <select id="filterArtifacts"
-                        class="form-control" 
-                        ng-model="selectedTypes" 
-                        ng-options="name for name in artifactTypes" 
-                        size="8" 
-                        multiple>
-                    </select>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="form-group col-xs-6">
+                        <label for="filterArtifacts">Artifacts</label>
+                        <select id="filterArtifacts"
+                            class="form-control"
+                            ng-model="filterArtifactTypes"
+                            ng-options="name for name in artifactTypes | orderBy:'toString()'"
+                            size="9"
+                            multiple>
+                        </select>
+                    </div>
+                    <div class="form-group col-xs-6">
+                        <label for="filterTags">Tags</label>
+                        <select id="filterTags"
+                            class="form-control"
+                            ng-model="filterTags"
+                            ng-options="name for name in tags | orderBy:'toString()'"
+                            size="9"
+                            multiple>
+                        </select>
+                    </div>
                 </div>
                 <button type="button" class="btn btn-primary" ng-click="applyFilter()">Apply</button>
             </div>
