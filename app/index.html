@@ -16,12 +16,65 @@
 <body>
 
     <div class="container-fluid" ng-controller="UseCaseForceController">
-        <div class="row center-block" id="header">
-            <h3 class="text-center">Jazzualization</h3>
-             <button class="pull-left" ng-click="viewUseCases()">Use Cases</button>
-             <button class="pull-left" ng-click="viewUserInterface()">UI</button>
-             <button class="pull-left" ng-click="viewDataModel()">Data Model</button>
-             <button class="pull-right" ng-click="applyFilter()">Update View</button>
+        <div class="row" id="header" style="border-bottom: 1px solid black;">
+            <div class="col-xs-4 vertical-align">
+                 <button type="button" class="btn btn-default" ng-click="viewUseCases()">Use Cases</button>
+                 <button type="button" class="btn btn-default" ng-click="viewUserInterface()">UI</button>
+                 <button type="button" class="btn btn-default" ng-click="viewDataModel()">Data Model</button>
+            </div>
+            <div class="col-xs-4 vertical-align">
+                <h2 class="text-center" style="margin: 0; padding: 0;">Jazzualization</h2>
+            </div>
+            <div class="col-xs-4 vertical-align">
+                 <a type="button"
+                    class="btn btn-warning pull-right" 
+                    data-toggle="collapse" 
+                    data-target="#optionsCollapse" 
+                    href="#optionsCollapse">
+                     <span class="glyphicon glyphicon-cog"></span>
+                 </a>
+                 <a type="button" 
+                    class="btn btn-primary pull-right" 
+                    data-toggle="collapse" 
+                    data-target="#filterCollapse" 
+                    href="#filterCollapse">
+                     <span class="glyphicon glyphicon-filter"></span>
+                 </a>
+            </div>
+        </div>
+        <div id="filterCollapse" class="panel-collapse collapse popover bottom" role="tooltip" style="top: 34px; left: 80%;">
+            <div class="arrow" style="left: 72.8204257246377%;"></div>
+            <div class="panel-heading">Filters</div>
+            <div class="panel-body" style="width: 300px;">
+                <div class="form-group">
+                    <label for="filterArtifacts">Artifacts</label>
+                    <select id="filterArtifacts"
+                        class="form-control" 
+                        ng-model="selectedTypes" 
+                        ng-options="name for name in artifactTypes" 
+                        size="8" 
+                        multiple>
+                    </select>
+                </div>
+                <button type="button" class="btn btn-primary" ng-click="applyFilter()">Apply</button>
+            </div>
+        </div>
+        <div id="optionsCollapse" class="panel-collapse collapse popover bottom" role="tooltip" style="top: 34px; left: 80%">
+            <div class="arrow" style="left: 90%;"></div>
+            <div class="panel-heading">Options</div>
+            <div class="panel-body">
+                <table class="table">
+                    <tr>
+                        <td>Radius</td>
+                        <td><input name="radius" ng-model="radius" /></td>
+                    </tr>
+                    <tr>
+                        <td>Charge</td>
+                        <td><input type="text" name="charge" ng-model="charge" /></td>
+                    </tr>
+                </table>
+                <button type="button" class="btn btn-primary" ng-click="updateLayout()">Apply</button>
+            </div>
         </div>
         <div class="row center-block">
             <svg class="view" id="view"></svg>

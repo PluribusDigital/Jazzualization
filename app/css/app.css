@@ -23,3 +23,9 @@
 	fill: white;
 	pointer-events: visible;
 }
+
+/* bootstrap helper */
+.vertical-align {
+    display: inline-block;
+    vertical-align: middle;
+}

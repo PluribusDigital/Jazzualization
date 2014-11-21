@@ -25,7 +25,7 @@ function dragstart(d) {
               /************************************************************************************************
                * Properties
                */
-              $scope.artifactTypes = ['', 'Use Case', 'Entity', 'Control', 'UI Pattern', 'Navigation', 'Key Screen', 'Actor', 'Role']
+              $scope.artifactTypes = ['Use Case', 'Entity', 'Control', 'UI Pattern', 'Navigation', 'Key Screen', 'Actor', 'Role', 'Interface']
               $scope.keywords = ['diagram', 'report', 'user', 'package:', 'auditing']
 
               $scope.width = Math.max(document.getElementById('view').offsetWidth, 960);
@@ -36,6 +36,8 @@ function dragstart(d) {
 
               $scope.nodes = [];
               $scope.links = [];
+
+              $scope.filterArtifactTypes = [];//$scope.artifactTypes.slice(0);
 
               /************************************************************************************************
                * d3js Properties
@@ -59,22 +61,30 @@ function dragstart(d) {
               $scope.d3zoom = d3.behavior.zoom()
                               .scaleExtent([.25, 8])
 
-              $scope.svgLinkEnum = $scope.graphLayer.selectAll(".link"),
+              $scope.svgLinkEnum = $scope.graphLayer.selectAll(".link");
               $scope.svgNodeEnum = $scope.graphLayer.selectAll(".node");
+
+              /************************************************************************************************
+              * Data Model Methods
+              */
+              $scope.loadData = function(url) {
+                  $http.get(url).success($scope.onModelLoaded);
+                  $scope.resetFilters();
+              }
 
               /************************************************************************************************
               * Commands
               */
               $scope.viewUseCases = function () {
-                  $http.get('data/uc.json').success($scope.onModelLoaded)
+                  $scope.loadData('data/uc.json');
               }
 
               $scope.viewUserInterface = function () {
-                  $http.get('data/ui.json').success($scope.onModelLoaded)
+                  $scope.loadData('data/ui.json');
               }
 
               $scope.viewDataModel = function () {
-                  $http.get('data/dm.json').success($scope.onModelLoaded)
+                  $scope.loadData('data/dm.json');
               }
 
               /************************************************************************************************
@@ -90,9 +100,9 @@ function dragstart(d) {
 
               $scope.nodeColor = function (d) {
                   var index = $scope.artifactTypes.indexOf(d.type)
-                  if (index < 1) {
+                  if (index < 0) {
                       var s = d.name.toLowerCase().split(" ");
-                      for (var i = 0; i < s.length && index <= 0; i++) {
+                      for (var i = 0; i < s.length && index < 0; i++) {
                           index = $scope.keywords.indexOf(s[i])
                       }
 
@@ -118,6 +128,11 @@ function dragstart(d) {
                   return {};
               }
 
+              $scope.resetFilters = function () {
+                  // Reset the filters
+                  $scope.filterArtifactTypes.splice(0, $scope.filterArtifactTypes.length);
+              }
+
               $scope.onModelLoaded = function (data) {
                   $scope.nodes = data.nodes.slice();
                   $scope.links = data.links.slice();
@@ -137,16 +152,32 @@ function dragstart(d) {
                   l0.splice(0, l0.length);
                   n0.splice(0, n0.length);
 
+                  // Prepare the filtering information
+                  var filtersExist = $scope.filterArtifactTypes.length > 0;
+
                   // Add the filtered nodes
                   for (var n = 0; n < $scope.nodes.length; n++) {
-                      n0.push($scope.nodes[n]);
+                      if (filtersExist) {
+                          var typeIndex = $scope.filterArtifactTypes.indexOf($scope.nodes[n].type);
+                          $scope.nodes[n].show = typeIndex >= 0;
+                      }
+                      else {
+                          $scope.nodes[n].show = true;
+                      }
+
+                      if ($scope.nodes[n].show) {
+                          n0.push($scope.nodes[n]);
+                      }
                   }
 
                   for (var i = 0; i < $scope.links.length; i++) {
                       var link = $scope.links[i];
                       var s = $scope.getNode(link.source),
                           t = $scope.getNode(link.target)
-                      l0.push({ source: s, target: t });
+
+                      if (s.show && t.show) {
+                          l0.push({ source: s, target: t });
+                      }
                   }
 
                   $scope.updateGraph();
@@ -154,7 +185,6 @@ function dragstart(d) {
 
               $scope.updateGraph = function () {
                   // Update links.
-                  //$scope.svgLinkEnum = $scope.svgLinkEnum.data($scope.force.links(), function (d) { return d.target.id; });
                   $scope.svgLinkEnum = $scope.svgLinkEnum.data($scope.force.links());
                   var lDeletes = $scope.svgLinkEnum.exit();
                   var lInserts = $scope.svgLinkEnum.enter();
@@ -226,6 +256,6 @@ function dragstart(d) {
               $scope.background.call($scope.d3zoom);
 
               // Load the first file
-              $scope.viewUseCases()
+              $scope.loadData('data/les_miz.json');
           }]);
 })(window.angular);
