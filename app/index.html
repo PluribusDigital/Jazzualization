@@ -6,19 +6,22 @@
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/app.css">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.3/angular.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.3/angular.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <!--<script src="http://d3js.org/d3.v3.min.js"></script>-->
+    <script src="http://d3js.org/d3.v3.js"></script>
     <script src="js/app.js"></script>
     <script src="js/use_case_force_controller.js"></script>
 </head>
 <body>
 
-    <div class="container-fluid" ng-controller="UseCaseForceController as x">
+    <div class="container-fluid" ng-controller="UseCaseForceController">
         <div class="row center-block" id="header">
-            <h3 class="text-center">Jazz-ualization of Use Cases</h3>
-             <input name="radius" ng-model="x.radius">
-             <input name="charge" ng-model="x.charge">
+            <h3 class="text-center">Jazzualization</h3>
+             <button class="pull-left" ng-click="viewUseCases()">Use Cases</button>
+             <button class="pull-left" ng-click="viewUserInterface()">UI</button>
+             <button class="pull-left" ng-click="viewDataModel()">Data Model</button>
+             <button class="pull-right" ng-click="applyFilter()">Update View</button>
         </div>
         <div class="row center-block">
             <svg class="view" id="view"></svg>
