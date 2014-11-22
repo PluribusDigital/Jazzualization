@@ -1,4 +1,4 @@
-Jazzulization
+Jazzualization
 -------------
 
 Visualization of Jazz artifacts via exports
