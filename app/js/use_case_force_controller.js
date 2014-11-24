@@ -25,7 +25,7 @@ function dragstart(d) {
               /************************************************************************************************
                * Properties
                */
-              $scope.artifactTypes = ['Use Case', 'Entity', 'Control', 'UI Pattern', 'Navigation', 'Key Screen', 'Actor', 'Role', 'Interface']
+              $scope.artifactTypes = ['', 'Use Case', 'Entity', 'Control', 'UI Pattern', 'Navigation', 'Key Screen', 'Actor', 'Role', 'Interface']
               $scope.keywords = ['diagram', 'report', 'user', 'package:', 'auditing']
               $scope.tags = ['Application', 'Completion', 'Enumeration', 'Global', 'Inspect', 'Schedule', 'HFIS', 'Oversight', 'OLTS', 'Partially Complete', 'Plan', 'Reference Data', 'ROE', 'ROP', 'Setup']
 
@@ -41,6 +41,9 @@ function dragstart(d) {
               $scope.filterArtifactTypes = [];
               $scope.filterTags = [];
 
+              $scope.availableBooleanOperations = ['AND', 'OR'];
+              $scope.artifactsTagsOperation = 'OR';
+
               /************************************************************************************************
                * d3js Properties
                */
@@ -50,7 +53,8 @@ function dragstart(d) {
                              .size([$scope.width, $scope.height])
 
               $scope.svg = d3.select(".view")
-                           .append("g");
+                             .attr("height", $scope.height)
+                             .append("g");
 
               $scope.background = $scope.svg
                                     .append("rect")
@@ -102,9 +106,9 @@ function dragstart(d) {
 
               $scope.nodeColor = function (d) {
                   var index = $scope.artifactTypes.indexOf(d.type)
-                  if (index < 0) {
+                  if (index <= 0) {
                       var s = d.name.toLowerCase().split(" ");
-                      for (var i = 0; i < s.length && index < 0; i++) {
+                      for (var i = 0; i < s.length && index <= 0; i++) {
                           index = $scope.keywords.indexOf(s[i])
                       }
 
@@ -170,7 +174,10 @@ function dragstart(d) {
                               tagIndex = $scope.filterTags.indexOf($scope.nodes[n].tags[nt])
                           }
 
-                          $scope.nodes[n].show = (typeIndex >= 0 || tagIndex >= 0);
+                          if( $scope.artifactsTagsOperation == 'OR' )
+                              $scope.nodes[n].show = (typeIndex >= 0 || tagIndex >= 0);
+                          else
+                              $scope.nodes[n].show = (typeIndex >= 0 && tagIndex >= 0);
                       }
                       else {
                           $scope.nodes[n].show = true;
