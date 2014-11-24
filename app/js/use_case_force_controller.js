@@ -78,15 +78,15 @@ function dragstart(d) {
               * Commands
               */
               $scope.viewUseCases = function () {
-                  $scope.loadData('data/uc.json');
+                  $scope.loadData('data/uc1.json');
               }
 
               $scope.viewUserInterface = function () {
-                  $scope.loadData('data/ui.json');
+                  $scope.loadData('data/ui1.json');
               }
 
               $scope.viewDataModel = function () {
-                  $scope.loadData('data/dm.json');
+                  $scope.loadData('data/dm1.json');
               }
 
               /************************************************************************************************

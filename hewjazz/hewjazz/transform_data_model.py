@@ -4,7 +4,7 @@ import argparse
 import transform_use_cases as XUC
 
 DEFAULT_INPUT_FILE = r'..\..\data_in\dm.csv'
-DEFAULT_OUTPUT_FILE = r'..\..\app\data\dm.json'
+DEFAULT_OUTPUT_FILE = r'..\..\app\data\dm0.json'
 
 #-------------------------------------------------------------------------------
 # Main

@@ -13,7 +13,7 @@ import transform_data_model as XDM
 
 class JazzModel:
     def __init__(self, fileName):
-        self.outFileName = fileName[:-5]+'0.json'
+        self.outFileName = fileName[:-6]+'1.json'
         f = codecs.open(fileName, 'r', encoding='utf-8')
         try:
             self.model = json.load(f)

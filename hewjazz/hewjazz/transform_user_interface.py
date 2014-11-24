@@ -7,7 +7,7 @@ import codecs
 from transform_use_cases import safeRead, atomizeTags, atomizeLinks, queueUpstreamLinks, queueDownstreamLinks
 
 DEFAULT_INPUT_FILE = r'..\..\data_in\ui.csv'
-DEFAULT_OUTPUT_FILE = r'..\..\app\data\ui.json'
+DEFAULT_OUTPUT_FILE = r'..\..\app\data\ui0.json'
 
 #-------------------------------------------------------------------------------
 # Class

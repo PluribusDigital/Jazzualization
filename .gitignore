@@ -14,6 +14,10 @@ $RECYCLE.BIN/
 *.msm
 *.msp
 
+# Extra workspace files
+d3.v3.min.js
+d3.v3.js
+
 # =========================
 # Operating System Files
 # =========================

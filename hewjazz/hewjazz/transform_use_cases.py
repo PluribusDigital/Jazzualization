@@ -6,7 +6,7 @@ import argparse
 import codecs
 
 DEFAULT_INPUT_FILE = r'..\..\data_in\uc.csv'
-DEFAULT_OUTPUT_FILE = r'..\..\app\data\uc.json'
+DEFAULT_OUTPUT_FILE = r'..\..\app\data\uc0.json'
 
 #-------------------------------------------------------------------------------
 # Base-Class Candidate Routines
