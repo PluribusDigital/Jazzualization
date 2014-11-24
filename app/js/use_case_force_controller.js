@@ -1,22 +1,4 @@
-﻿function optimalHeight() {
-    var y1 = document.getElementById('header').offsetHeight;
-    var y0 = window.innerHeight;
-    return Math.max(y0 - y1, 600);
-}
-
-function click(d) {
-    if (d3.event.defaultPrevented) return; // ignore drag
-}
-
-function dblclick(d) {
-    d3.select(this).classed("fixed", d.fixed = false);
-}
-
-function dragstart(d) {
-    d3.select(this).classed("fixed", d.fixed = true);
-}
-
-(function (angular) {
+﻿(function (angular) {
     'use strict';
 
     angular.module('jazzualization', [])
@@ -29,8 +11,8 @@ function dragstart(d) {
               $scope.keywords = ['diagram', 'report', 'user', 'package:', 'auditing']
               $scope.tags = ['Application', 'Completion', 'Enumeration', 'Global', 'Inspect', 'Schedule', 'HFIS', 'Oversight', 'OLTS', 'Partially Complete', 'Plan', 'Reference Data', 'ROE', 'ROP', 'Setup']
 
-              $scope.width = Math.max(document.getElementById('view').offsetWidth, 960);
-              $scope.height = optimalHeight();
+              $scope.width = window.layout.viewWidth();
+              $scope.height = window.layout.viewHeight();
 
               $scope.radius = Math.sqrt($scope.width * $scope.height) / 20;
               $scope.charge = -1 * $scope.radius;
@@ -53,7 +35,6 @@ function dragstart(d) {
                              .size([$scope.width, $scope.height])
 
               $scope.svg = d3.select(".view")
-                             .attr("height", $scope.height)
                              .append("g");
 
               $scope.background = $scope.svg
@@ -219,8 +200,8 @@ function dragstart(d) {
 
                   var nodeEnter = nInserts.append("g")
                       .attr("class", "node")
-                      .on("click", click)
-                      .on("dblclick", dblclick)
+                      .on("click", $scope.onClick)
+                      .on("dblclick",  $scope.onDblClick)
                       .call($scope.force.drag);
 
                   nodeEnter.append("ellipse")
@@ -248,7 +229,11 @@ function dragstart(d) {
                       .start();
               }
 
-              $scope.tick = function () {
+              /************************************************************************************************
+              * Event Handlers
+              */
+
+              $scope.onTick = function () {
                   $scope.svgLinkEnum.attr("x1", function (d) { return d.source.x; })
                        .attr("y1", function (d) { return d.source.y; })
                        .attr("x2", function (d) { return d.target.x; })
@@ -262,13 +247,25 @@ function dragstart(d) {
                   $scope.graphLayer.attr("transform", "translate(" + d3.event.translate + ")scale(" + d3.event.scale + ")");
               }
 
+              $scope.onClick = function(d) {
+                  if (d3.event.defaultPrevented) return; // ignore drag
+              }
+
+              $scope.onDblClick = function(d) {
+                  d3.select(this).classed("fixed", d.fixed = false);
+              }
+
+              $scope.onDragStart = function(d) {
+                  d3.select(this).classed("fixed", d.fixed = true);
+              }
+
               /************************************************************************************************
               * Initialize
               */
               // Register event handlers
               $scope.d3zoom.on("zoom", $scope.onZoom);
-              $scope.force.drag().on("dragstart", dragstart);
-              $scope.force.on("tick", $scope.tick);
+              $scope.force.drag().on("dragstart", $scope.onDragStart);
+              $scope.force.on("tick", $scope.onTick);
 
               // Start listening for zoom events
               $scope.background.call($scope.d3zoom);

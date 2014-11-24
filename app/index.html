@@ -11,6 +11,7 @@
     <!--<script src="http://d3js.org/d3.v3.min.js"></script>-->
     <script src="js/d3.v3.min.js"></script>
     <script src="js/app.js"></script>
+    <script src="js/layout.js"></script>
     <script src="js/use_case_force_controller.js"></script>
 </head>
 <body>
@@ -27,6 +28,7 @@
             </div>
             <div class="col-xs-4 vertical-align">
                  <a type="button"
+                    id="filterButton"
                     class="btn btn-warning pull-right" 
                     data-toggle="collapse" 
                     data-target="#optionsCollapse" 
@@ -34,6 +36,7 @@
                      <span class="glyphicon glyphicon-cog"></span>
                  </a>
                  <a type="button" 
+                    id="optionsButton"
                     class="btn btn-primary pull-right" 
                     data-toggle="collapse" 
                     data-target="#filterCollapse" 
@@ -42,7 +45,7 @@
                  </a>
             </div>
         </div>
-        <div id="filterCollapse" class="panel-collapse collapse popover bottom" role="tooltip" style="top: 34px; left: 70%; max-width: 500px;">
+        <div id="filterCollapse" class="panel-collapse collapse popover bottom" role="tooltip" style="max-width: 500px;">
             <div class="arrow" style="left: 72.8204257246377%;"></div>
             <div class="panel-body">
                 <div class="row">
@@ -85,7 +88,7 @@
                 <button type="button" class="btn btn-primary" ng-click="applyFilter()">Apply</button>
             </div>
         </div>
-        <div id="optionsCollapse" class="panel-collapse collapse popover bottom" role="tooltip" style="top: 34px; left: 80%">
+        <div id="optionsCollapse" class="panel-collapse collapse popover bottom" role="tooltip" style="">
             <div class="arrow" style="left: 90%;"></div>
             <div class="panel-heading">Options</div>
             <div class="panel-body">
@@ -106,5 +109,23 @@
             <svg class="view" id="view"></svg>
         </div>
     </div>
+
+    <script type="text/javascript">
+        // Register to update layout after screen size changes
+        $(window).resize(function () {
+            if (this.resizeTO) clearTimeout(this.resizeTO);
+            this.resizeTO = setTimeout(function () {
+                $(this).trigger('resizeEnd');
+            }, 500);
+        });
+        $(window).bind('resizeEnd', function () {
+            if (window.layout) {
+                window.layout.update();
+            }
+        });
+
+        // Perform initial layout
+        window.layout.update();
+    </script>
 </body>
 </html>

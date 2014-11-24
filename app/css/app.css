@@ -15,9 +15,6 @@
 	font-weight: lighter;
 	text-anchor: middle;
 }
-.view {
-	width: 100%;
-}
 .underlay {
 	fill: white;
 	pointer-events: visible;
