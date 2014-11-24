@@ -234,12 +234,25 @@
               */
 
               $scope.onTick = function () {
-                  $scope.svgLinkEnum.attr("x1", function (d) { return d.source.x; })
-                       .attr("y1", function (d) { return d.source.y; })
-                       .attr("x2", function (d) { return d.target.x; })
-                       .attr("y2", function (d) { return d.target.y; });
+                  $scope.svgLinkEnum
+                      .attr("x1", function (d) { return d.source.x; })
+                      .attr("y1", function (d) { return d.source.y; })
+                      .attr("x2", function (d) { return d.target.x; })
+                      .attr("y2", function (d) { return d.target.y; });
 
-                  $scope.svgNodeEnum.attr("transform", function (d) { return "translate(" + d.x + "," + d.y + ")"; });
+                  //.attr("transform", function (d) { return "translate(" + d.x + "," + d.y + ")"; });
+
+                  d3.selectAll("ellipse")
+                      .attr("cx", function (d) { return d.x; })
+                      .attr("cy", function (d) { return d.y; });
+
+                  d3.selectAll(".node rect")
+                      .attr("x", function (d) { return d.x; })
+                      .attr("y", function (d) { return d.y; })
+
+                  d3.selectAll("text")
+                      .attr("x", function (d) { return d.x; })
+                      .attr("y", function (d) { return d.y; })
               }
 
               $scope.onZoom = function () {
