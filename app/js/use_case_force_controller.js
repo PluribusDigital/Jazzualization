@@ -48,9 +48,6 @@
               $scope.d3zoom = d3.behavior.zoom()
                               .scaleExtent([.25, 8])
 
-              $scope.svgLinkEnum = $scope.graphLayer.selectAll(".link");
-              $scope.svgNodeEnum = $scope.graphLayer.selectAll(".node");
-
               /************************************************************************************************
               * Data Model Methods
               */
@@ -183,20 +180,18 @@
               }
 
               $scope.updateGraph = function () {
-                  // Update links.
-                  $scope.svgLinkEnum = $scope.svgLinkEnum.data($scope.force.links());
-                  var lDeletes = $scope.svgLinkEnum.exit();
-                  var lInserts = $scope.svgLinkEnum.enter();
+                  // Clear all nodes and links
+                  $scope.graphLayer.selectAll("*").remove();
 
-                  lDeletes.remove();
-                  lInserts.insert("line", ".node").attr("class", "link");
+                  // Update links.
+                  var lEnum = $scope.graphLayer.selectAll(".link").data($scope.force.links());
+                  var lInserts = lEnum.enter();
 
                   // Update nodes.
-                  $scope.svgNodeEnum = $scope.svgNodeEnum.data($scope.force.nodes(), $scope.nodeKey);
-                  var nDeletes = $scope.svgNodeEnum.exit();
-                  var nInserts = $scope.svgNodeEnum.enter();
+                  var nEnum = $scope.graphLayer.selectAll(".node").data($scope.force.nodes(), $scope.nodeKey);
+                  var nInserts = nEnum.enter();
 
-                  nDeletes.remove();
+                  lInserts.insert("line", ".node").attr("class", "link");
 
                   var nodeEnter = nInserts.append("g")
                       .attr("class", "node")
@@ -234,7 +229,7 @@
               */
 
               $scope.onTick = function () {
-                  $scope.svgLinkEnum
+                  d3.selectAll(".link")
                       .attr("x1", function (d) { return d.source.x; })
                       .attr("y1", function (d) { return d.source.y; })
                       .attr("x2", function (d) { return d.target.x; })
