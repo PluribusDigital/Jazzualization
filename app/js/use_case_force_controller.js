@@ -26,6 +26,9 @@
               $scope.availableBooleanOperations = ['AND', 'OR'];
               $scope.artifactsTagsOperation = 'OR';
 
+              $scope.highlight = 0;
+              $scope.neighbors = {};
+
               /************************************************************************************************
                * d3js Properties
                */
@@ -56,6 +59,10 @@
                   $scope.resetFilters();
               }
 
+              $scope.neighboring = function(a, b) {
+                  return $scope.neighbors[a.id + "," + b.id];
+              }
+
               /************************************************************************************************
               * Commands
               */
@@ -82,6 +89,12 @@
                   return $scope.radius * 0.8;
               }
 
+              $scope.nodeOffset = function (d) {
+                  var x0 = $scope.radius * -0.65;
+                  var y0 = $scope.radius * -0.4;
+                  return "translate(" + x0 + "," + y0 + ")";
+              }
+
               $scope.nodeColor = function (d) {
                   var index = $scope.artifactTypes.indexOf(d.type)
                   if (index <= 0) {
@@ -104,6 +117,7 @@
               * Layout Methods
               */
               $scope.getNode = function (id) {
+                  // TODO: Improve on O(N)
                   for (var i = 0; i < $scope.nodes.length; i++) {
                       if ($scope.nodes[i].id == id)
                           return $scope.nodes[i];
@@ -120,6 +134,15 @@
               $scope.onModelLoaded = function (data) {
                   $scope.nodes = data.nodes.slice();
                   $scope.links = data.links.slice();
+
+                  // Rebuild neighbor array
+                  $scope.neighbors = {};
+                  $scope.nodes.forEach(function (d) {
+                      $scope.neighbors[d.id + "," + d.id] = 1;
+                  });
+                  $scope.links.forEach(function (d) {
+                      $scope.neighbors[d.source + "," + d.target] = 1;
+                  });
 
                   // TODO: Dynamically build list of tags
 
@@ -196,9 +219,13 @@
                   var nodeEnter = nInserts.append("g")
                       .attr("class", "node")
                       .on("click", $scope.onClick)
-                      .on("dblclick",  $scope.onDblClick)
+                      .on("dblclick", $scope.onDblClick)
                       .call($scope.force.drag);
 
+                  //nodeEnter.append("rect")
+                  //    .attr("width", $scope.nodeRX)
+                  //    .attr("height", $scope.nodeRY)
+                  //    .attr("transform", $scope.nodeOffset)
                   nodeEnter.append("ellipse")
                       .attr("rx", $scope.nodeRX)
                       .attr("ry", $scope.nodeRY)
@@ -235,8 +262,6 @@
                       .attr("x2", function (d) { return d.target.x; })
                       .attr("y2", function (d) { return d.target.y; });
 
-                  //.attr("transform", function (d) { return "translate(" + d.x + "," + d.y + ")"; });
-
                   d3.selectAll("ellipse")
                       .attr("cx", function (d) { return d.x; })
                       .attr("cy", function (d) { return d.y; });
@@ -251,12 +276,13 @@
               }
 
               $scope.onZoom = function () {
-                  //
                   $scope.graphLayer.attr("transform", "translate(" + d3.event.translate + ")scale(" + d3.event.scale + ")");
               }
 
               $scope.onClick = function(d) {
                   if (d3.event.defaultPrevented) return; // ignore drag
+
+                  $scope.onHighlightNeighbors(d);
               }
 
               $scope.onDblClick = function(d) {
@@ -265,6 +291,31 @@
 
               $scope.onDragStart = function(d) {
                   d3.select(this).classed("fixed", d.fixed = true);
+              }
+
+              $scope.onHighlightNeighbors = function (d) {
+                  // Get the selecting enumerators
+                  var node = d3.selectAll(".node");
+                  var link = d3.selectAll(".link");
+
+                  if ($scope.highlight == 0) {
+                      //Reduce the opacity of all but the neighbouring nodes
+                      node.style("opacity", function (o) {
+                          return $scope.neighboring(d, o) | $scope.neighboring(o, d) ? 1 : 0.1;
+                      });
+                      link.style("opacity", function (o) {
+                          return d.id == o.source.id | d.id == o.target.id ? 1 : 0.1;
+                      });
+
+                      // Flip the switch
+                      $scope.highlight = 1;
+
+                  } else {
+                      //Put back to opacity=1
+                      node.style("opacity", 1);
+                      link.style("opacity", 1);
+                      $scope.highlight = 0;
+                  }
               }
 
               /************************************************************************************************
@@ -277,6 +328,14 @@
 
               // Start listening for zoom events
               $scope.background.call($scope.d3zoom);
+
+              // Initialize the color/legend
+              for (var i = 0; i < $scope.artifactTypes.length; i++) {
+                  $scope.colors(i)
+              }
+              for (var i = 0; i < $scope.keywords.length; i++) {
+                  $scope.colors(i + $scope.artifactTypes.length)
+              }
 
               // Load the first file
               $scope.loadData('data/les_miz.json');
