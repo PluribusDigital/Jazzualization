@@ -1,0 +1,105 @@
+id,name,tags,type
+3125,Enter Inspection Findings/Violations,Completion,Use Case
+3145,Generate TRG (Technical Review Group) Report,"HFIS, Oversight",Use Case
+3109,Manage Inspection Procedures,Setup,Use Case
+3163,Package: Manage GFEs,OLTS,Use Case Diagram
+3164,Package: Prepare Candidates for GFE,OLTS,Use Case Diagram
+3165,Package: Record GFE Results,OLTS,Use Case Diagram
+3166,Package: Process Application,OLTS,Use Case Diagram
+3167,Package: Process Operating Exam,OLTS,Use Case Diagram
+3168,Package: Manage Operations,OLTS,Use Case Diagram
+3169,Package: Issue License/Letter,OLTS,Use Case Diagram
+3170,Package: Administer Systerm,OLTS,Use Case Diagram
+3172,Package: Global Functions,"Global,OLTS",Use Case Diagram
+3178,Package: Administer System,Setup,Use Case Diagram
+3179,Package: Plan for Inspection,Plan,Use Case Diagram
+3181,Package: Manage Scheduling,Schedule,Use Case Diagram
+3182,Package: Record Inspection Data,Inspect,Use Case Diagram
+3183,Pacakge: Prepare Reports,Completion,Use Case Diagram
+3184,Package: Manage Events,Oversight,Use Case Diagram
+3185,Package: Manage Assessments,Oversight,Use Case Diagram
+3186,Package: Manage Human Performance,Oversight,Use Case Diagram
+3187,Package: Global,,Use Case Diagram
+3248,Replacement RPS Core Use Case Diagram,,Use Case Diagram
+3258,Replacement RPS (ROE/ROP/HFIS) Use Case Diagram,Oversight,Use Case Diagram
+5600,Replacement RPS Oversight Use Case Diagram,,Use Case Diagram
+13276,Replacement RPS OLTS Use Case Diagram,"Application,GFE,License,OLTS",Use Case Diagram
+14558,Administer GFE Dates,"GFE,OLTS",Use Case Diagram
+2692,Operator License Assistant,OLTS,Actor
+2693,Approver,OLTS,Actor
+2694,Chief Examiner,OLTS,Actor
+2695,Examination Staff,OLTS,Actor
+2696,GFE Examination Staff,OLTS,Actor
+2697,Medical Review Officer,OLTS,Actor
+2698,Candidate,OLTS,Actor
+2699,Applicant,OLTS,Actor
+2700,Examinee,OLTS,Actor
+2701,Operator,OLTS,Actor
+3155,Technical Support,,Actor
+3156,Scheduler,"Plan,Schedule",Actor
+3157,Project Engineer/RPS Coordinator,,Actor
+3158,Inspector,"Completion,Inspect",Actor
+3159,Data Admin,Setup,Actor
+3160,Approver,,Actor
+3173,Headquarters Operations Officer,Oversight,Actor
+3174,Performance Assessment Lead,Oversight,Actor
+3175,Operations Experience Coordinator,Oversight,Actor
+3176,Human Factors Engineer,Oversight,Actor
+3188,-All-,,Actor
+3237,Psychologist,Oversight,Actor
+3238,Technical Review Group,Oversight,Actor
+3780,Reviewer,,Actor
+3781,Signature Authority,,Actor
+3852,Requestor,,Actor
+5673,Performance Indicator Lead,,Actor
+5674,Regional Offices,,Actor
+5689,Issue Manager,,Actor
+5784,Regional Office,,Actor
+5927,Enforcement Specialist,,Actor
+14528,Operator Licensing Branch Staff,OLTS,Actor
+14529,GFE Examination Staff,OLTS,Actor
+3300,Region,"Enumeration,Reference Data",Entity
+3323,Activity Type,"Enumeration,Reference Data",Entity
+3344,Procedure Type,"Enumeration,Reference Data",Entity
+3345,Profile Type,"Enumeration,Reference Data",Entity
+3346,Docket Category,"Enumeration,Reference Data",Entity
+3366,Docket Type,"Enumeration,Reference Data",Entity
+3386,Cycle Type,"Enumeration,Reference Data",Entity
+3675,Phase Code,"Enumeration,Reference Data",Entity
+3679,Issue Type,"Enumeration,Reference Data",Entity
+3680,Cornerstone,"Enumeration,Reference Data",Entity
+3681,SDP Risk Assessment,"Enumeration,Reference Data",Entity
+3683,Inspection Type,"Enumeration,Reference Data",Entity
+3690,Completion Status,"Enumeration,Reference Data",Entity
+3718,Document Status,"Enumeration,Reference Data",Entity
+3725,Sunsi,"Enumeration,Reference Data",Entity
+5411,Severity Level,"Enumeration,Oversight,Reference Data",Entity
+5677,Scram Type,"Enumeration,Oversight,Reference Data",Entity
+5678,Event Type,"Enumeration,Oversight,Reference Data",Entity
+5681,Disposition,"Enumeration,Oversight,Reference Data",Entity
+5781,Issue Status,"Enumeration,Oversight,Reference Data",Entity
+5782,Issue Category,"Enumeration,Oversight,Reference Data",Entity
+5806,Action Matrix Response,"Enumeration,Oversight,ROP,Reference Data",Entity
+5903,Technical Review Group,"Enumeration,Oversight,Reference Data",Entity
+5907,Priority,"Enumeration,Oversight,ROE,Reference Data",Entity
+5916,Cross Cutting Area,"Enumeration,Oversight,Reference Data",Entity
+8396,Exam Type,"Enumeration,OLTS,Reference Data",Entity
+8397,Training Type,"Enumeration,OLTS,Reference Data",Entity
+8398,Degree Type,"Enumeration,OLTS,Reference Data",Entity
+8400,Positions,"Enumeration,OLTS,Reference Data",Entity
+8401,Disposition Type,"Enumeration,OLTS,Reference Data",Entity
+8402,Substance Type,"Enumeration,OLTS,Reference Data",Entity
+8403,Application Type,"Enumeration,OLTS,Reference Data",Entity
+8404,Exam Result Type,"Enumeration,OLTS,Reference Data",Entity
+8405,License Type,"Enumeration,OLTS,Reference Data",Entity
+8406,License Result Type,"Enumeration,OLTS,Reference Data",Entity
+8407,License Action Type,"Enumeration,OLTS,Reference Data",Entity
+8412,Waiver Type,"Enumeration,OLTS,Reference Data",Entity
+8415,Waiver Result Type,"Enumeration,OLTS,Reference Data",Entity
+13286,License Status Type,"Enumeration,OLTS,Reference Data",Entity
+14522,Notification Category,"Enumeration,OLTS,Reference Data",Entity
+3337,Manage Feedback Form,Setup,Use Case
+3700,Auditing - Minimal,,Requirement
+3701,Auditing - Moderate,,Requirement
+3702,Auditing - Heavy,,Requirement
+5908,Plant Status (System Interface),,System Interface
