@@ -7,9 +7,9 @@
               /************************************************************************************************
                * Properties
                */
-              $scope.artifactTypes = ['', 'Use Case', 'Entity', 'Control', 'UI Pattern', 'Navigation', 'Key Screen', 'Actor', 'Role', 'System Interface', 'Use Case Diagram', 'Requirement']
-              $scope.keywords = []
+              $scope.artifactTypes = ['Use Case Diagram', 'Use Case', 'Actor', 'Role', 'Navigation', 'Key Screen', 'Control', 'UI Pattern', 'System Interface', 'Entity', 'Requirement']
               $scope.tags = ['Application', 'Completion', 'Enumeration', 'Global', 'Inspect', 'Schedule', 'HFIS', 'Oversight', 'OLTS', 'Partially Complete', 'Plan', 'Reference Data', 'ROE', 'ROP', 'Setup']
+              $scope.legend = []
 
               $scope.width = window.layout.viewWidth();
               $scope.height = window.layout.viewHeight();
@@ -97,15 +97,6 @@
 
               $scope.nodeColor = function (d) {
                   var index = $scope.artifactTypes.indexOf(d.type)
-                  if (index <= 0) {
-                      var s = d.name.toLowerCase().split(" ");
-                      for (var i = 0; i < s.length && index <= 0; i++) {
-                          index = $scope.keywords.indexOf(s[i])
-                      }
-
-                      index + $scope.artifactTypes.length
-                  }
-
                   return $scope.colors(index);
               }
 
@@ -333,11 +324,9 @@
 
               // Initialize the color/legend
               for (var i = 0; i < $scope.artifactTypes.length; i++) {
-                  $scope.colors(i)
+                  $scope.legend.push({ 'name': $scope.artifactTypes[i], 'color': $scope.colors(i) });
               }
-              for (var i = 0; i < $scope.keywords.length; i++) {
-                  $scope.colors(i + $scope.artifactTypes.length)
-              }
+              $scope.legend.push({ 'name': '--unknown--', 'color': $scope.colors(-1) });
 
               // Load the first file
               $scope.loadData('data/les_miz.json');

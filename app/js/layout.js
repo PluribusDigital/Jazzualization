@@ -75,6 +75,7 @@ var Layout = function () {
         // Set the position of the filter panel
         self.positionPanel('filterButton', 'filterCollapse', 325);  // offsetWidth = 0 when this routine is called initially :/
         self.positionPanel('optionsButton', 'optionsCollapse', 300);  
+        self.positionPanel('legendButton', 'legendCollapse', 250);
 
     }
 }

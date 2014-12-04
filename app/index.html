@@ -19,16 +19,17 @@
     <div class="container-fluid" ng-controller="UseCaseForceController">
         <div class="row" id="header" style="border-bottom: 1px solid black;">
             <div class="col-xs-4 vertical-align">
-                 <button type="button" class="btn btn-default" ng-click="viewUseCases()">Use Cases</button>
-                 <button type="button" class="btn btn-default" ng-click="viewUserInterface()">UI</button>
-                 <button type="button" class="btn btn-default" ng-click="viewDataModel()">Data Model</button>
+                 <button title="View the graph of use cases" type="button" class="btn btn-default" ng-click="viewUseCases()">Use Cases</button>
+                 <button title="View the graph of the user interface artifacts" type="button" class="btn btn-default" ng-click="viewUserInterface()">UI</button>
+                 <button title="View the graph of the logical data model" type="button" class="btn btn-default" ng-click="viewDataModel()">Data Model</button>
             </div>
             <div class="col-xs-4 vertical-align">
                 <h2 class="text-center" style="margin: 0; padding: 0;">Jazzualization</h2>
             </div>
             <div class="col-xs-4 vertical-align">
-                 <a type="button"
-                    id="filterButton"
+                <a type="button"
+                    id="optionsButton"
+                    title="Set graph options"
                     class="btn btn-warning pull-right" 
                     data-toggle="collapse" 
                     data-target="#optionsCollapse" 
@@ -36,12 +37,22 @@
                      <span class="glyphicon glyphicon-cog"></span>
                  </a>
                  <a type="button" 
-                    id="optionsButton"
+                    id="filterButton"
+                    title="Apply a filter"
                     class="btn btn-primary pull-right" 
                     data-toggle="collapse" 
                     data-target="#filterCollapse" 
                     href="#filterCollapse">
                      <span class="glyphicon glyphicon-filter"></span>
+                 </a>
+                 <a type="button"
+                    id="legendButton"
+                    title="Display the legend"
+                    class="btn btn-info pull-right" 
+                    data-toggle="collapse" 
+                    data-target="#legendCollapse" 
+                    href="#legendCollapse">
+                     <span class="glyphicon glyphicon-stats"></span>
                  </a>
             </div>
         </div>
@@ -103,6 +114,22 @@
                     </tr>
                 </table>
                 <button type="button" class="btn btn-primary" ng-click="updateGraph()">Apply</button>
+            </div>
+        </div>
+        <div id="legendCollapse" class="panel-collapse collapse popover bottom" role="tooltip" style="max-width: 250px;">
+            <div class="arrow" style="left: 60%;"></div>
+            <div class="panel-heading">Legend</div>
+            <div class="panel-body">
+                <table>
+                    <tr ng-repeat="item in legend">
+                        <td>
+                            <svg width="25" height="20">
+                                <rect x="1" y="1" width="15" height="15" style="fill: {{item.color}}; stroke-width: 1px; stroke: rgb(0,0,0)" />
+                            </svg>
+                        </td>
+                        <td style="vertical-align: top">{{item.name}}</td>
+                    </tr>
+                </table>
             </div>
         </div>
         <div class="row center-block">
