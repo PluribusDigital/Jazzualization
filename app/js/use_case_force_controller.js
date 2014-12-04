@@ -7,8 +7,8 @@
               /************************************************************************************************
                * Properties
                */
-              $scope.artifactTypes = ['', 'Use Case', 'Entity', 'Control', 'UI Pattern', 'Navigation', 'Key Screen', 'Actor', 'Role', 'Interface']
-              $scope.keywords = ['diagram', 'report', 'user', 'package:', 'auditing']
+              $scope.artifactTypes = ['', 'Use Case', 'Entity', 'Control', 'UI Pattern', 'Navigation', 'Key Screen', 'Actor', 'Role', 'System Interface', 'Use Case Diagram', 'Requirement']
+              $scope.keywords = []
               $scope.tags = ['Application', 'Completion', 'Enumeration', 'Global', 'Inspect', 'Schedule', 'HFIS', 'Oversight', 'OLTS', 'Partially Complete', 'Plan', 'Reference Data', 'ROE', 'ROP', 'Setup']
 
               $scope.width = window.layout.viewWidth();
@@ -167,25 +167,27 @@
 
                   // Add the filtered nodes
                   for (var n = 0; n < $scope.nodes.length; n++) {
+                      var node = $scope.nodes[n];
+
                       if (filtersExist) {
-                          var typeIndex = $scope.filterArtifactTypes.indexOf($scope.nodes[n].type);
+                          var typeIndex = $scope.filterArtifactTypes.indexOf(node.type);
 
                           var tagIndex = -1;
-                          for (var nt = 0; nt < $scope.nodes[n].tags.length && tagIndex <= 0; nt++) {
-                              tagIndex = $scope.filterTags.indexOf($scope.nodes[n].tags[nt])
+                          for (var nt = 0; nt < node.tags.length && tagIndex < 0; nt++) {
+                              tagIndex = $scope.filterTags.indexOf(node.tags[nt])
                           }
 
                           if( $scope.artifactsTagsOperation == 'OR' )
-                              $scope.nodes[n].show = (typeIndex >= 0 || tagIndex >= 0);
+                              node.show = (typeIndex >= 0 || tagIndex >= 0);
                           else
-                              $scope.nodes[n].show = (typeIndex >= 0 && tagIndex >= 0);
+                              node.show = (typeIndex >= 0 && tagIndex >= 0);
                       }
                       else {
-                          $scope.nodes[n].show = true;
+                          node.show = true;
                       }
 
-                      if ($scope.nodes[n].show) {
-                          n0.push($scope.nodes[n]);
+                      if (node.show) {
+                          n0.push(node);
                       }
                   }
 
