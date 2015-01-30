@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Jazzualization", ".", "{3865803D-0BAA-4CC4-9A9C-0107C09A3541}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/Jazzualization"
+		Debug.AspNetCompiler.PhysicalPath = "..\Jazzualization\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\Jazzualization\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/Jazzualization"
+		Release.AspNetCompiler.PhysicalPath = "..\Jazzualization\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\Jazzualization\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "49346"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3865803D-0BAA-4CC4-9A9C-0107C09A3541}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3865803D-0BAA-4CC4-9A9C-0107C09A3541}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
