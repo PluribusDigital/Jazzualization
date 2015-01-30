@@ -43,7 +43,8 @@ id,Reused Count,Name,Tags,Link From,Link To,Artifact Type
 3290: Inspection Manual Chapter
 3297: Staff
 3675: Phase Code",Entity
-3297,3,Staff,Reference Data,"3122: Allocate Inspection Staff
+3297,3,Staff,Reference Data,"14690: Review
+3122: Allocate Inspection Staff
 3337: Manage Feedback Form
 3384: Staff Allocation
 3860: PI Data
@@ -55,7 +56,8 @@ id,Reused Count,Name,Tags,Link From,Link To,Artifact Type
 3759: Approve Inspection Report
 3375: Inspection Report
 3378: Branch
-3121: Manage Schedule Conflicts","3300: Region
+3121: Manage Schedule Conflicts
+14652: Project","3300: Region
 3295: Site
 3701: Auditing - Moderate
 3378: Branch",Entity
@@ -68,6 +70,7 @@ id,Reused Count,Name,Tags,Link From,Link To,Artifact Type
 5679: OpE Data
 8335: License
 14521: Notification
+14648: TAC
 3678: Inspection Findings
 5410: Issue Notice Violation","3295: Site
 3689: Facility Licensee
@@ -75,14 +78,27 @@ id,Reused Count,Name,Tags,Link From,Link To,Artifact Type
 3366: Docket Type
 3346: Docket Category
 3675: Phase Code",Entity
+3300,3,Region,"Enumeration,Reference Data","3296: Profile
+14521: Notification
+3297: Staff",3700: Auditing - Minimal,Entity
 3301,3,Office,Reference Data,"3376: Division
 3292: Procedure Reference
 3296: Profile","3376: Division
 3700: Auditing - Minimal",Entity
+3323,3,Activity Type,"Enumeration,Reference Data",3365: Non-Inspection Activity,"",Entity
+3344,3,Procedure Type,"Enumeration,Reference Data",3292: Procedure Reference,3700: Auditing - Minimal,Entity
+3345,3,Profile Type,"Enumeration,Reference Data",3296: Profile,"",Entity
+3346,3,Docket Category,"Enumeration,Reference Data","3298: Docket
+7131: GFE Result
+3292: Procedure Reference
+3296: Profile",3700: Auditing - Minimal,Entity
 3365,3,Non-Inspection Activity,Inspect,"3148: Search for Activity
 3118: Manage Non-Inspection Activities","3700: Auditing - Minimal
 3323: Activity Type
 3297: Staff",Entity
+3366,3,Docket Type,"Enumeration,Reference Data","3298: Docket
+3684: Inspection Report Template
+3296: Profile",3700: Auditing - Minimal,Entity
 3370,3,Inspection Cycle,Reference Data,3383: Procedure Activity,"3386: Cycle Type
 3700: Auditing - Minimal",Entity
 3371,3,Inspection Activity,Schedule,"3383: Procedure Activity
@@ -113,10 +129,12 @@ id,Reused Count,Name,Tags,Link From,Link To,Artifact Type
 3297: Staff",Entity
 3376,3,Division,Reference Data,"3301: Office
 3296: Profile
-3378: Branch","3301: Office
+3378: Branch
+14652: Project","3301: Office
 3700: Auditing - Minimal
 3378: Branch",Entity
-3378,3,Branch,Reference Data,"3122: Allocate Inspection Staff
+3378,3,Branch,Reference Data,"14690: Review
+3122: Allocate Inspection Staff
 3376: Division
 3296: Profile
 3759: Approve Inspection Report
@@ -156,7 +174,13 @@ id,Reused Count,Name,Tags,Link From,Link To,Artifact Type
 3371: Inspection Activity","3383: Procedure Activity
 3700: Auditing - Minimal
 3297: Staff",Entity
+3386,3,Cycle Type,"Enumeration,Reference Data","3370: Inspection Cycle
+3292: Procedure Reference
+3296: Profile",3700: Auditing - Minimal,Entity
 3674,1,User,Reference Data,14521: Notification,3379: Role,Entity
+3675,4,Phase Code,"Enumeration,Reference Data","3298: Docket
+3292: Procedure Reference
+3296: Profile",3700: Auditing - Minimal,Entity
 3678,3,Inspection Findings,Oversight,"3125: Enter Inspection Findings/Violations
 5406: View Plant Performance
 3375: Inspection Report
@@ -167,16 +191,29 @@ id,Reused Count,Name,Tags,Link From,Link To,Artifact Type
 3680: Cornerstone
 3718: Document Status
 3681: SDP Risk Assessment",Entity
+3679,4,Issue Type,"Enumeration,Reference Data","3678: Inspection Findings
+5410: Issue Notice Violation",3700: Auditing - Minimal,Entity
+3680,4,Cornerstone,"Enumeration,Reference Data","5797: Performance Indicator
+3678: Inspection Findings","",Entity
+3681,4,SDP Risk Assessment,"Enumeration,Reference Data","3678: Inspection Findings
+5410: Issue Notice Violation",3700: Auditing - Minimal,Entity
 3682,3,Assessment Letter,Completion,"5406: View Plant Performance
 3253: Create Assessment Letter",3701: Auditing - Moderate,Entity
+3683,3,Inspection Type,"Enumeration,Reference Data","3684: Inspection Report Template
+3375: Inspection Report","",Entity
 3684,3,Inspection Report Template,Reference Data,"3128: Compile Inspection Report
 3375: Inspection Report","3683: Inspection Type
 3366: Docket Type",Entity
 3689,3,Facility Licensee,Reference Data,"3298: Docket
 5675: OpE Event",3700: Auditing - Minimal,Entity
+3690,4,Completion Status,"Enumeration,Reference Data",3383: Procedure Activity,"",Entity
 3691,3,Procedure Summary Template,Reference Data,3292: Procedure Reference,3700: Auditing - Minimal,Entity
 3692,3,Procedure Summary,Completion,"3383: Procedure Activity
 3192: Manage Inspection Reports",3375: Inspection Report,Entity
+3718,4,Document Status,"Enumeration,Reference Data","3678: Inspection Findings
+3380: Change Notice
+3375: Inspection Report",3700: Auditing - Minimal,Entity
+3725,4,Sunsi,"Enumeration,Reference Data",3375: Inspection Report,"",Entity
 3860,4,PI Data,Oversight,"3137: Generate Performance Indicator Data
 5406: View Plant Performance","3298: Docket
 3702: Auditing - Heavy
@@ -189,6 +226,7 @@ id,Reused Count,Name,Tags,Link From,Link To,Artifact Type
 5411: Severity Level
 5916: Cross Cutting Area
 3681: SDP Risk Assessment",Entity
+5411,2,Severity Level,"Enumeration,Oversight,Reference Data",5410: Issue Notice Violation,3700: Auditing - Minimal,Entity
 5662,3,Human Factors,Oversight,"3143: Search For Human Factors
 3147: Assess Public Reports For Human Factors
 5682: Human Factors TRG","5805: Human Factors Detail
@@ -204,6 +242,8 @@ id,Reused Count,Name,Tags,Link From,Link To,Artifact Type
 3702: Auditing - Heavy
 5678: Event Type
 3297: Staff",Entity
+5677,2,Scram Type,"Enumeration,Oversight,Reference Data",5675: OpE Event,3700: Auditing - Minimal,Entity
+5678,2,Event Type,"Enumeration,Oversight,Reference Data",5675: OpE Event,3700: Auditing - Minimal,Entity
 5679,2,OpE Data,Oversight,"5906: OpE Technical Review
 5687: Perform Preliminary Screening
 5905: Manage Level 2 Screening
@@ -216,12 +256,15 @@ id,Reused Count,Name,Tags,Link From,Link To,Artifact Type
 3702: Auditing - Heavy
 5681: Disposition
 5781: Issue Status",Entity
+5681,2,Disposition,"Enumeration,Oversight,Reference Data",5679: OpE Data,3700: Auditing - Minimal,Entity
 5682,3,Human Factors TRG,Oversight,3145: Generate TRG (Technical Review Group) Report,"5662: Human Factors
 3701: Auditing - Moderate",Entity
 5731,3,Action Matrix,"Oversight,ROP","5406: View Plant Performance
 5413: Update Action Matrix","3702: Auditing - Heavy
 5802: Time Span
 5806: Action Matrix Response",Entity
+5781,2,Issue Status,"Enumeration,Oversight,Reference Data",5679: OpE Data,3700: Auditing - Minimal,Entity
+5782,2,Issue Category,"Enumeration,Oversight,Reference Data",5679: OpE Data,"",Entity
 5797,3,Performance Indicator,"Oversight,Reference Data","3860: PI Data
 5801: PI Threshold","3700: Auditing - Minimal
 3680: Cornerstone",Entity
@@ -234,12 +277,17 @@ id,Reused Count,Name,Tags,Link From,Link To,Artifact Type
 5662: Human Factors",5803: Human Factors Category,Entity
 5805,2,Human Factors Detail,"HFIS,Oversight,Reference Data",5662: Human Factors,"3700: Auditing - Minimal
 5804: Human Factors Area",Entity
+5806,3,Action Matrix Response,"Enumeration,Oversight,ROP,Reference Data",5731: Action Matrix,3700: Auditing - Minimal,Entity
 5902,2,Issue Source,"Oversight,ROE,Reference Data",5679: OpE Data,3700: Auditing - Minimal,Entity
+5903,2,Technical Review Group,"Enumeration,Oversight,Reference Data","5906: OpE Technical Review
+3190: Manage Reference Data",3700: Auditing - Minimal,Entity
 5906,2,OpE Technical Review,"Oversight,ROE","5679: OpE Data
 3132: Perform Technical Review","5903: Technical Review Group
 5907: Priority
 3701: Auditing - Moderate
 5679: OpE Data",Entity
+5907,"",Priority,"Enumeration,Oversight,ROE,Reference Data",5906: OpE Technical Review,"",Entity
+5916,2,Cross Cutting Area,"Enumeration,Oversight,Reference Data",5410: Issue Notice Violation,3700: Auditing - Minimal,Entity
 7127,1,GFE Exam,OLTS,"2675: Generate GFE Announcement Letter
 13287: Enter GFE Dates",3700: Auditing - Minimal,Entity
 7131,1,GFE Result,OLTS,"2678: Generate GFE Examiner Letter
@@ -346,7 +394,22 @@ id,Reused Count,Name,Tags,Link From,Link To,Artifact Type
 8343,1,Appeals,OLTS,2684: Manage Appeals,"8336: Exam
 8327: Applicant
 3701: Auditing - Moderate",Entity
+8396,1,Exam Type,"Enumeration,OLTS,Reference Data",8336: Exam,3700: Auditing - Minimal,Entity
+8397,1,Training Type,"Enumeration,OLTS,Reference Data",8281: Applicant Training,"",Entity
+8398,1,Degree Type,"Enumeration,OLTS,Reference Data",8326: Applicant Education,3700: Auditing - Minimal,Entity
 8399,1,Schools,"OLTS,Reference Data",8326: Applicant Education,3700: Auditing - Minimal,Entity
+8400,1,Positions,"Enumeration,OLTS,Reference Data","8333: Application
+8328: Applicant Position",3700: Auditing - Minimal,Entity
+8401,1,Disposition Type,"Enumeration,OLTS,Reference Data",8330: Applicant Fitness,3700: Auditing - Minimal,Entity
+8402,1,Substance Type,"Enumeration,OLTS,Reference Data",8330: Applicant Fitness,3700: Auditing - Minimal,Entity
+8403,1,Application Type,"Enumeration,OLTS,Reference Data",8333: Application,3700: Auditing - Minimal,Entity
+8404,1,Exam Result Type,"Enumeration,OLTS,Reference Data","8339: Application Renewal
+7131: GFE Result
+8338: Exam Result",3700: Auditing - Minimal,Entity
+8405,1,License Type,"Enumeration,OLTS,Reference Data","8333: Application
+8335: License",3700: Auditing - Minimal,Entity
+8406,1,License Result Type,"Enumeration,OLTS,Reference Data",8335: License,3700: Auditing - Minimal,Entity
+8407,1,License Action Type,"Enumeration,OLTS,Reference Data",8340: License Action,3700: Auditing - Minimal,Entity
 8408,1,License Condition Type,"OLTS,Reference Data","8337: License Condition
 8410: License Condition Amendment Map",3700: Auditing - Minimal,Entity
 8409,1,License Amendment Type,"OLTS,Reference Data","8341: License Amended
@@ -355,8 +418,11 @@ id,Reused Count,Name,Tags,Link From,Link To,Artifact Type
 8408: License Condition Type
 8409: License Amendment Type",Entity
 8411,1,Medical Restriction Type,OLTS,8332: Application Medical,3700: Auditing - Minimal,Entity
+8412,1,Waiver Type,"Enumeration,OLTS,Reference Data","8334: Application Waiver
+8414: Waiver Category",3700: Auditing - Minimal,Entity
 8414,1,Waiver Category,"OLTS,Reference Data",8334: Application Waiver,"8412: Waiver Type
 3700: Auditing - Minimal",Entity
+8415,1,Waiver Result Type,"Enumeration,OLTS,Reference Data",8334: Application Waiver,3700: Auditing - Minimal,Entity
 13277,1,Address,OLTS,"8327: Applicant
 8333: Application
 8335: License
@@ -369,6 +435,7 @@ id,Reused Count,Name,Tags,Link From,Link To,Artifact Type
 8334: Application Waiver
 8335: License
 8328: Applicant Position","",Entity
+13286,1,License Status Type,"Enumeration,OLTS,Reference Data",8335: License,3700: Auditing - Minimal,Entity
 14521,1,Notification,OLTS,14540: View Notifications,"8327: Applicant
 3300: Region
 14522: Notification Category
@@ -376,3 +443,83 @@ id,Reused Count,Name,Tags,Link From,Link To,Artifact Type
 3295: Site
 3700: Auditing - Minimal
 3674: User",Entity
+14522,1,Notification Category,"Enumeration,OLTS,Reference Data",14521: Notification,3700: Auditing - Minimal,Entity
+14648,1,TAC,"Firefly,Reference Data",14698: Work Type,"3298: Docket
+3700: Auditing - Minimal",Entity
+14649,1,Project Template,"Firefly,Reference Data","14651: Review Milestone Template
+14650: Project Milestone Template
+14652: Project","14681: Safety Significant Event
+14686: Enhance Operational Function
+14680: Office Priority
+14687: Develop Critical Function
+3700: Auditing - Minimal
+14679: Business Line Priority
+14682: Safety Significance Level
+14685: Schedule Priority Level
+14698: Work Type",Entity
+14650,1,Project Milestone Template,"Firefly,Reference Data",14688: Project Milestone,"3700: Auditing - Minimal
+14649: Project Template",Entity
+14651,1,Review Milestone Template,"Firefly,Reference Data",14691: Review Milestone,"3700: Auditing - Minimal
+14649: Project Template",Entity
+14652,1,Project,Firefly,"14690: Review
+14688: Project Milestone","14681: Safety Significant Event
+3376: Division
+14686: Enhance Operational Function
+14680: Office Priority
+14693: Tag
+14687: Develop Critical Function
+14679: Business Line Priority
+14682: Safety Significance Level
+3701: Auditing - Moderate
+14685: Schedule Priority Level
+14700: ADAMS Document
+14649: Project Template
+14694: Comment
+3297: Staff
+14695: Schedule Priority
+14696: Complexity",Entity
+14679,1,Business Line Priority,"Enumeration,Firefly,Reference Data","14649: Project Template
+14652: Project",3700: Auditing - Minimal,Entity
+14680,1,Office Priority,"Enumeration,Firefly,Reference Data","14649: Project Template
+14652: Project",3700: Auditing - Minimal,Entity
+14681,1,Safety Significant Event,"Enumeration,Firefly,Reference Data","14649: Project Template
+14652: Project",3700: Auditing - Minimal,Entity
+14682,1,Safety Significance Level,"Enumeration,Firefly,Reference Data","14649: Project Template
+14652: Project",3700: Auditing - Minimal,Entity
+14685,1,Schedule Priority Level,"Enumeration,Firefly,Reference Data","14649: Project Template
+14652: Project",3700: Auditing - Minimal,Entity
+14686,1,Enhance Operational Function,"Enumeration,Firefly,Reference Data","14649: Project Template
+14652: Project",3700: Auditing - Minimal,Entity
+14687,1,Develop Critical Function,"Enumeration,Firefly,Reference Data","14649: Project Template
+14652: Project",3700: Auditing - Minimal,Entity
+14688,1,Project Milestone,Firefly,"","14689: Project Milestone Status
+3701: Auditing - Moderate
+14650: Project Milestone Template
+14652: Project",Entity
+14689,1,Project Milestone Status,"Enumeration,Firefly,Reference Data",14688: Project Milestone,3700: Auditing - Minimal,Entity
+14690,1,Review,Firefly,14691: Review Milestone,"14693: Tag
+3701: Auditing - Moderate
+14700: ADAMS Document
+3378: Branch
+14697: Review Type
+14694: Comment
+3297: Staff
+14652: Project",Entity
+14691,1,Review Milestone,Firefly,"","14690: Review
+14692: Review Milestone Status
+3701: Auditing - Moderate
+14651: Review Milestone Template",Entity
+14692,1,Review Milestone Status,"Enumeration,Firefly,Reference Data",14691: Review Milestone,3700: Auditing - Minimal,Entity
+14693,1,Tag,"Enumeration,Firefly,Reference Data","14690: Review
+14694: Comment
+14652: Project",3700: Auditing - Minimal,Entity
+14694,1,Comment,Firefly,"14690: Review
+14652: Project","14693: Tag
+3701: Auditing - Moderate",Entity
+14695,1,Schedule Priority,"Enumeration,Firefly,Reference Data",14652: Project,3700: Auditing - Minimal,Entity
+14696,1,Complexity,"Enumeration,Firefly,Reference Data",14652: Project,3700: Auditing - Minimal,Entity
+14697,1,Review Type,"Enumeration,Firefly,Reference Data",14690: Review,3700: Auditing - Minimal,Entity
+14698,1,Work Type,"Enumeration,Firefly,Reference Data",14649: Project Template,"3700: Auditing - Minimal
+14648: TAC",Entity
+14700,"",ADAMS Document,Firefly,"14690: Review
+14652: Project",3701: Auditing - Moderate,Entity
