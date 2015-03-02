@@ -1,6 +1,6 @@
 id,Name,Artifact Type,Tags,Embeds,Link From,Status
 3227,Controls Summary,Control,"","","",Approved
-3331,Data Table Summary,Control,"",3717: datatable.png,"",Approved
+3331,Data Table Summary,Control,"",3717: datatable.png,"",Draft
 3332,Profile Control Summary,Control,"","3707: BasicLayout_8.png
 3704: ManageProfilesAccordion.png","",Approved
 3333,Who Filter Summary,Control,"",3325: Control - Who Filter,3151: Manage Profiles,Approved
@@ -39,15 +39,16 @@ id,Name,Artifact Type,Tags,Embeds,Link From,Status
 3333: Who Filter Summary
 3336: Where Filter Summary
 3334: What Filter - Inspection & Schedule",Approved
-5748,Navigation Summary,Navigation,"",8280: Navbar-all.png,"",Approved
+5748,Navigation Summary,Navigation,"",8280: Navbar-all.png,"",Draft
 5809,Public ROP Navigation Structure,Navigation,"","","",Approved
 5810,Public ROE Navigation Structure,Navigation,"","","",Approved
 8300,Inspection Navigation Map Summary,Navigation,"Completion,Inspect,Schedule",8302: Inspection Map,"",Approved
 8301,Plant Assessment Map Summary,Navigation,"Oversight,ROP",8310: Plant Assessment Map,"",Approved
 8303,Clearinghouse Navigation Map Summary,Navigation,"Oversight,ROE",8307: Clearinghouse Map,"",Approved
 8304,Human Factors Navigation Map Summary,Navigation,"HFIS,Oversight",8309: Human Factors Map,"",Approved
-8305,Operator Licensing Navigation Map Summary,Navigation,OLTS,14524: OLTS Navigation Map,"",Under Review
-8306,Data Administration Navigation Map Summary,Navigation,Setup,8308: Data Administration Map,"",Approved
+8305,Operator Licensing Navigation Map Summary,Navigation,OLTS,14524: OLTS Navigation Map,"",Approved
+8306,Data Administration Navigation Map Summary,Navigation,Setup,8308: Data Administration Map,"",Draft
+14793,Firefly Navigation Map Summary,Navigation,Firefly,14792: Firefly Navigation Map,"",Draft
 3758,Index Reference Tables,Key Screen,Setup,3846: Manage Reference Data.png,"8306: Data Administration Navigation Map Summary
 3190: Manage Reference Data",Approved
 3759,Approve Inspection Report,Key Screen,Completion,8260: wrkflow-apprv.png,"8300: Inspection Navigation Map Summary
@@ -101,17 +102,43 @@ id,Name,Artifact Type,Tags,Embeds,Link From,Status
 3192: Manage Inspection Reports",Approved
 7103,Review Inspection Report,Key Screen,Completion,8259: wrkflw-review.png,"8300: Inspection Navigation Map Summary
 3129: Finalize and Distribute Inspection Report",Approved
-14543,Home,Key Screen,OLTS,14556: OLTS Home,14540: View Notifications,Under Review
-14544,Applicants Index,Key Screen,OLTS,14557: Applicants Index,2691: Perform Searches in OLTS,Under Review
-14545,Operator Docket - History Tab,Key Screen,OLTS,14560: Docket - History Tab,14606: View Docket History,Under Review
-14546,Operator Docket - Applications Tab,Key Screen,OLTS,14561: Docket - Application Tab,2680: Initiate Operator License Application,Under Review
-14547,Operator Docket - Qualifications Tab,Key Screen,OLTS,14562: Docket - QualificationsTab,2680: Initiate Operator License Application,Under Review
-14548,Operator Docket - Medical Tab,Key Screen,OLTS,14563: Docket - Medical Tab,2681: Process Medical Results,Under Review
-14549,Operator Docket - Examinations Tab,Key Screen,OLTS,14564: Docket - Examinations Tab,"",Under Review
+14543,Home,Key Screen,OLTS,14556: OLTS Home,14540: View Notifications,Approved
+14544,Applicants Index,Key Screen,OLTS,14557: Applicants Index,2691: Perform Searches in OLTS,Approved
+14545,Operator Docket - History Tab,Key Screen,OLTS,14560: Docket - History Tab,14606: View Docket History,Approved
+14546,Operator Docket - Applications Tab,Key Screen,OLTS,14561: Docket - Application Tab,2680: Initiate Operator License Application,Approved
+14547,Operator Docket - Qualifications Tab,Key Screen,OLTS,14562: Docket - QualificationsTab,2680: Initiate Operator License Application,Approved
+14548,Operator Docket - Medical Tab,Key Screen,OLTS,14563: Docket - Medical Tab,2681: Process Medical Results,Approved
+14549,Operator Docket - Examinations Tab,Key Screen,OLTS,14564: Docket - Examinations Tab,"",Approved
 14550,Operator Docket - Licenses Tab,Key Screen,OLTS,14565: Docket - License Tab,"2686: Process Terminations
-2688: Manage Licenses",Under Review
-14551,Operator Docket - Notes Tab,Key Screen,OLTS,14566: Docket - Notes Tab,14605: View Docket Notes,Under Review
-14552,GFE Enrollment,Key Screen,OLTS,14567: GFE Enroll,2677: Register Candidate for GFE,Under Review
-14553,GFE Scoring,Key Screen,OLTS,14568: GFE Score,2679: Enter GFE Results,Under Review
-14554,Reports Index,Key Screen,OLTS,14569: Reports,2690: Create OLTS Reports,Under Review
-14555,Licenses Due (Report 11),Key Screen,OLTS,14570: Licenses Due,"",Under Review
+2688: Manage Licenses",Approved
+14551,Operator Docket - Notes Tab,Key Screen,OLTS,14566: Docket - Notes Tab,14605: View Docket Notes,Approved
+14552,GFE Enrollment,Key Screen,OLTS,14567: GFE Enroll,2677: Register Candidate for GFE,Approved
+14553,GFE Scoring,Key Screen,OLTS,14568: GFE Score,2679: Enter GFE Results,Approved
+14554,Reports Index,Key Screen,OLTS,14569: Reports,2690: Create OLTS Reports,Approved
+14555,Licenses Due (Report 11),Key Screen,OLTS,14570: Licenses Due,"",Approved
+14827,Home,Key Screen,Firefly,"14818: Dashboard - Milestones
+14819: Dashboard - Projects",14793: Firefly Navigation Map Summary,Draft
+14828,Review Index,Key Screen,Firefly,14820: Review Index,14793: Firefly Navigation Map Summary,Draft
+14829,Milestones Tab,Key Screen,Firefly,14821: Milestones Tab,"14610: Conduct Technical Review
+14611: Manage Technical Review
+14814: Check-In Review Comments
+14793: Firefly Navigation Map Summary
+14607: Update Project Information",Draft
+14830,Assigned Reviewers,Key Screen,Firefly,14822: Branch Chief Reviews,"14611: Manage Technical Review
+14793: Firefly Navigation Map Summary",Draft
+14832,Comments Tab,Key Screen,Firefly,14833: Comments,"14796: View Project Comments
+14793: Firefly Navigation Map Summary",Draft
+14834,History Tab,Key Screen,Firefly,14825: History Tab,14793: Firefly Navigation Map Summary,Draft
+14839,Schedule Priority,Key Screen,Firefly,14838: Schedule Priority,"14797: Manage Project Templates
+14793: Firefly Navigation Map Summary
+14607: Update Project Information",Draft
+14847,Manage Roles,Key Screen,Setup,"14845: Manage Roles - Users
+14846: Manage Roles - Permissions","8306: Data Administration Navigation Map Summary
+14798: Manage Roles
+5915: Role Engineering Summary",Draft
+14851,Manage Project Templates,Key Screen,Firefly,14850: Manage Project Template,"14797: Manage Project Templates
+14793: Firefly Navigation Map Summary",Draft
+14937,Create Project,Key Screen,Firefly,14844: Create New Project.png,"14719: Create New Project
+14793: Firefly Navigation Map Summary",Draft
+14940,Notifications,Key Screen,Firefly,"","14791: View Firefly Notifications (Dashboard)
+14793: Firefly Navigation Map Summary",Draft

@@ -7,7 +7,7 @@
               /************************************************************************************************
                * Properties
                */
-              $scope.artifactTypes = ['Use Case Diagram', 'Use Case', 'Actor', 'Role', 'Navigation', 'Key Screen', 'Control', 'UI Pattern', 'System Interface', 'Entity', 'Requirement']
+              $scope.artifactTypes = ['Use Case Diagram', 'Use Case', 'Actor', 'Storyboard', 'Navigation', 'Key Screen', 'Control', 'UI Pattern', 'System Interface', 'Entity', 'Role', 'Requirement']
               $scope.tags = ['Application', 'Completion', 'Enumeration', 'Firefly', 'Global', 'Inspect', 'Schedule', 'HFIS', 'Oversight', 'OLTS', 'Partially Complete', 'Plan', 'Reference Data', 'ROE', 'ROP', 'Setup']
               $scope.legend = []
 

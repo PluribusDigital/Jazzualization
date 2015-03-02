@@ -52,10 +52,14 @@ id,Reused Count,Name,Tags,Link From,Link To,Artifact Type
 5662: Human Factors
 3296: Profile
 3365: Non-Inspection Activity
+14688: Project Milestone
+14891: Notification
 3380: Change Notice
+14691: Review Milestone
 3759: Approve Inspection Report
 3375: Inspection Report
 3378: Branch
+14694: Comment
 3121: Manage Schedule Conflicts
 14652: Project","3300: Region
 3295: Site
@@ -70,9 +74,10 @@ id,Reused Count,Name,Tags,Link From,Link To,Artifact Type
 5679: OpE Data
 8335: License
 14521: Notification
-14648: TAC
+14648: Billing Info
 3678: Inspection Findings
-5410: Issue Notice Violation","3295: Site
+5410: Issue Notice Violation
+14652: Project","3295: Site
 3689: Facility Licensee
 3702: Auditing - Heavy
 3366: Docket Type
@@ -136,13 +141,16 @@ id,Reused Count,Name,Tags,Link From,Link To,Artifact Type
 3378,3,Branch,Reference Data,"14690: Review
 3122: Allocate Inspection Staff
 3376: Division
+14894: Project Support
 3296: Profile
 3759: Approve Inspection Report
 3121: Manage Schedule Conflicts
-3297: Staff","3376: Division
+3297: Staff
+14652: Project","3376: Division
 3700: Auditing - Minimal
 3297: Staff",Entity
-3379,3,Role,Reference Data,3674: User,3701: Auditing - Moderate,Entity
+3379,3,Role,Reference Data,"14798: Manage Roles
+3674: User",3701: Auditing - Moderate,Entity
 3380,3,Change Notice,Setup,"8276: Create Change Notice
 3292: Procedure Reference
 3290: Inspection Manual Chapter","3292: Procedure Reference
@@ -177,7 +185,8 @@ id,Reused Count,Name,Tags,Link From,Link To,Artifact Type
 3386,3,Cycle Type,"Enumeration,Reference Data","3370: Inspection Cycle
 3292: Procedure Reference
 3296: Profile",3700: Auditing - Minimal,Entity
-3674,1,User,Reference Data,14521: Notification,3379: Role,Entity
+3674,1,User,Reference Data,"14521: Notification
+14798: Manage Roles",3379: Role,Entity
 3675,4,Phase Code,"Enumeration,Reference Data","3298: Docket
 3292: Procedure Reference
 3296: Profile",3700: Auditing - Minimal,Entity
@@ -444,9 +453,12 @@ id,Reused Count,Name,Tags,Link From,Link To,Artifact Type
 3700: Auditing - Minimal
 3674: User",Entity
 14522,1,Notification Category,"Enumeration,OLTS,Reference Data",14521: Notification,3700: Auditing - Minimal,Entity
-14648,1,TAC,"Firefly,Reference Data",14698: Work Type,"3298: Docket
+14648,1,Billing Info,"Firefly,Reference Data","14698: Work Type
+14652: Project","3298: Docket
 3700: Auditing - Minimal",Entity
-14649,1,Project Template,"Firefly,Reference Data","14651: Review Milestone Template
+14649,1,Project Template,"Firefly,Reference Data","14719: Create New Project
+14797: Manage Project Templates
+14651: Review Milestone Template
 14650: Project Milestone Template
 14652: Project","14681: Safety Significant Event
 14686: Enhance Operational Function
@@ -457,15 +469,23 @@ id,Reused Count,Name,Tags,Link From,Link To,Artifact Type
 14682: Safety Significance Level
 14685: Schedule Priority Level
 14698: Work Type",Entity
-14650,1,Project Milestone Template,"Firefly,Reference Data",14688: Project Milestone,"3700: Auditing - Minimal
+14650,1,Project Milestone Template,"Firefly,Reference Data","14688: Project Milestone
+14797: Manage Project Templates","3700: Auditing - Minimal
 14649: Project Template",Entity
-14651,1,Review Milestone Template,"Firefly,Reference Data",14691: Review Milestone,"3700: Auditing - Minimal
+14651,1,Review Milestone Template,"Firefly,Reference Data","14797: Manage Project Templates
+14691: Review Milestone","3700: Auditing - Minimal
 14649: Project Template",Entity
 14652,1,Project,Firefly,"14690: Review
-14688: Project Milestone","14681: Safety Significant Event
+14719: Create New Project
+14894: Project Support
+14688: Project Milestone
+14757: Request Review
+14607: Update Project Information","14681: Safety Significant Event
 3376: Division
 14686: Enhance Operational Function
+3298: Docket
 14680: Office Priority
+14892: Project Status
 14693: Tag
 14687: Develop Critical Function
 14679: Business Line Priority
@@ -474,6 +494,9 @@ id,Reused Count,Name,Tags,Link From,Link To,Artifact Type
 14685: Schedule Priority Level
 14700: ADAMS Document
 14649: Project Template
+14648: Billing Info
+14898: Escalation
+3378: Branch
 14694: Comment
 3297: Staff
 14695: Schedule Priority
@@ -492,34 +515,68 @@ id,Reused Count,Name,Tags,Link From,Link To,Artifact Type
 14652: Project",3700: Auditing - Minimal,Entity
 14687,1,Develop Critical Function,"Enumeration,Firefly,Reference Data","14649: Project Template
 14652: Project",3700: Auditing - Minimal,Entity
-14688,1,Project Milestone,Firefly,"","14689: Project Milestone Status
+14688,1,Project Milestone,Firefly,14607: Update Project Information,"14689: Project Milestone Status
 3701: Auditing - Moderate
+14694: Comment
 14650: Project Milestone Template
+3297: Staff
 14652: Project",Entity
 14689,1,Project Milestone Status,"Enumeration,Firefly,Reference Data",14688: Project Milestone,3700: Auditing - Minimal,Entity
-14690,1,Review,Firefly,14691: Review Milestone,"14693: Tag
+14690,1,Review,Firefly,"14610: Conduct Technical Review
+14611: Manage Technical Review
+14814: Check-In Review Comments
+14691: Review Milestone","14693: Tag
 3701: Auditing - Moderate
+14893: Review Status
 14700: ADAMS Document
 3378: Branch
 14697: Review Type
 14694: Comment
 3297: Staff
 14652: Project",Entity
-14691,1,Review Milestone,Firefly,"","14690: Review
+14691,1,Review Milestone,Firefly,"14610: Conduct Technical Review
+14611: Manage Technical Review","14690: Review
 14692: Review Milestone Status
 3701: Auditing - Moderate
-14651: Review Milestone Template",Entity
+14651: Review Milestone Template
+14694: Comment
+3297: Staff",Entity
 14692,1,Review Milestone Status,"Enumeration,Firefly,Reference Data",14691: Review Milestone,3700: Auditing - Minimal,Entity
-14693,1,Tag,"Enumeration,Firefly,Reference Data","14690: Review
+14693,1,Tag,"Firefly,Reference Data","14690: Review
 14694: Comment
 14652: Project",3700: Auditing - Minimal,Entity
 14694,1,Comment,Firefly,"14690: Review
+14688: Project Milestone
+14796: View Project Comments
+14691: Review Milestone
+14898: Escalation
 14652: Project","14693: Tag
-3701: Auditing - Moderate",Entity
-14695,1,Schedule Priority,"Enumeration,Firefly,Reference Data",14652: Project,3700: Auditing - Minimal,Entity
+3701: Auditing - Moderate
+3297: Staff",Entity
+14695,1,Schedule Priority,"Enumeration,Firefly,Reference Data","14797: Manage Project Templates
+14652: Project",3700: Auditing - Minimal,Entity
 14696,1,Complexity,"Enumeration,Firefly,Reference Data",14652: Project,3700: Auditing - Minimal,Entity
 14697,1,Review Type,"Enumeration,Firefly,Reference Data",14690: Review,3700: Auditing - Minimal,Entity
-14698,1,Work Type,"Enumeration,Firefly,Reference Data",14649: Project Template,"3700: Auditing - Minimal
-14648: TAC",Entity
-14700,"",ADAMS Document,Firefly,"14690: Review
+14698,2,Work Type,"Enumeration,Firefly,Reference Data",14649: Project Template,"3700: Auditing - Minimal
+14648: Billing Info",Entity
+14700,1,ADAMS Document,Firefly,"14690: Review
+14800: View Firefly Documents in ADAMS
 14652: Project",3701: Auditing - Moderate,Entity
+14758,"",Docket Group,"","","",Entity
+14890,1,Notification Rule,"Firefly,Reference Data",14891: Notification,3701: Auditing - Moderate,Entity
+14891,1,Notification,Firefly,14791: View Firefly Notifications (Dashboard),"14890: Notification Rule
+3701: Auditing - Moderate
+3297: Staff",Entity
+14892,1,Project Status,"Enumeration,Firefly,Reference Data",14652: Project,3700: Auditing - Minimal,Entity
+14893,1,Review Status,"Enumeration,Firefly,Reference Data",14690: Review,3700: Auditing - Minimal,Entity
+14894,1,Project Support,Firefly,14757: Request Review,"3701: Auditing - Moderate
+3378: Branch
+14652: Project",Entity
+14895,1,Escalation Type,"Enumeration,Firefly,Reference Data",14898: Escalation,3700: Auditing - Minimal,Entity
+14898,1,Escalation,Firefly,"14756: Manage Project Escalations
+14652: Project","14927: Escalation Status
+14895: Escalation Type
+14694: Comment",Entity
+14927,1,Escalation Status,"Enumeration,Firefly,Reference Data",14898: Escalation,3700: Auditing - Minimal,Entity
+14935,"",Permission Type,Reference Data,"",3700: Auditing - Minimal,Entity
+14936,"",Permission Domain,Reference Data,"",3700: Auditing - Minimal,Entity

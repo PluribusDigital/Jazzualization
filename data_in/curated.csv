@@ -103,3 +103,34 @@ id,name,tags,type
 3701,Auditing - Moderate,,Requirement
 3702,Auditing - Heavy,,Requirement
 5908,Plant Status (System Interface),,System Interface
+5915,Role Engineering Summary,Requirement,Requirement
+13278,Update Operator Docket,Firefly,Storyboard
+14654,Project Manager,Firefly,Actor
+14655,Branch Chief,Firefly,Actor
+14656,Technical Reviewer,Firefly,Actor
+14657,Admin,Firefly,Actor
+14725,Create New Project,Firefly,Storyboard
+14726,Manage Project Resources - Project Manager,Firefly,Storyboard
+14737,View Draft Project,Firefly,Storyboard
+14744,Manage Project Resources - Branch Chief,Firefly,Storyboard
+14754,Manage Project Resources - Technical Reviewer,Firefly,Storyboard
+14763,Request Review,Firefly,Storyboard
+14772,Conduct Technical Review,Firefly,Storyboard
+14779,Manage Technical Reviews,Firefly,Storyboard
+14816,Update Project Information,Firefly,Storyboard
+14856,Manage Project Escalations,Firefly,Storyboard
+14860,View Firefly Notifications (Dashboard) - Project Manager,Firefly,Storyboard
+14864,View Firefly Notifications (Dashboard) - Branch Chief,Firefly,Storyboard
+14867,View Firefly Notifications (Dashboard) - Technical Reviewer,Firefly,Storyboard
+14870,View Firefly Notifications (Dashboard) - Admin,Firefly,Storyboard
+14879,Create Notification,Firefly,Storyboard
+14884,Manage Roles,Firefly,Storyboard
+14885,Manage Project Templates,Firefly,Storyboard
+14908,Check-In Review Comment,Firefly,Storyboard
+14915,View Firefly Documents in ADAMS,Firefly,Storyboard
+14919,View Project Comments,Firefly,Storyboard
+14923,Create New Project (Blank Template),Firefly,Storyboard
+14928,Create Firefly Reports,Firefly,Storyboard
+14934,Escalation Executive,Firefly,Actor
+14938,Designated Project Manager,Firefly,Actor
+14939,Designated Branch Chief,Firefly,Actor

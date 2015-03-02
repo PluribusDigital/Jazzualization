@@ -254,10 +254,6 @@ id,Name,Tags,Link From,Link To,Artifact Type
 8276,Create Change Notice,"Partially Complete,Setup","3248: Replacement RPS Core Use Case Diagram
 3178: Package: Administer System","3380: Change Notice
 3852: Requestor",Use Case
-13278,Update Operator Docket,OLTS,"3170: Package: Administer Systerm
-13276: Replacement RPS OLTS Use Case Diagram","8341: License Amended
-2692: Operator License Assistant
-2693: Approver",Use Case
 13287,Enter GFE Dates,"GFE,OLTS,Setup","13276: Replacement RPS OLTS Use Case Diagram
 14558: Administer GFE Dates","3159: Data Admin
 7127: GFE Exam",Use Case
@@ -279,9 +275,74 @@ id,Name,Tags,Link From,Link To,Artifact Type
 14606,View Docket History,"Global,OLTS","3172: Package: Global Functions
 13276: Replacement RPS OLTS Use Case Diagram","14545: Operator Docket - History Tab
 2692: Operator License Assistant",Use Case
-14607,Initiate Blue Sheet Activities ,"","","",Use Case
-14608,View Licensee Application ,"","","",Use Case
-14609,Create Milestones ,"","","",Use Case
-14610,Document and Track Licensee Actions ,"","","",Use Case
-14611,Assign Green Sheet Reviewer,"","","",Use Case
-14612,Perform Green Sheet Review ,"","","",Use Case
+14607,Update Project Information,Firefly,"","14938: Designated Project Manager
+14829: Milestones Tab
+14839: Schedule Priority
+14688: Project Milestone
+14816: Update Project Information
+14654: Project Manager
+14652: Project",Use Case
+14610,Conduct Technical Review,Firefly,"","14690: Review
+14829: Milestones Tab
+14772: Conduct Technical Review
+14691: Review Milestone
+14656: Technical Reviewer",Use Case
+14611,Manage Technical Review,Firefly,"","14690: Review
+14829: Milestones Tab
+14779: Manage Technical Reviews
+14830: Assigned Reviewers
+14939: Designated Branch Chief
+14691: Review Milestone
+14655: Branch Chief",Use Case
+14719,Create New Project,Firefly,"","14938: Designated Project Manager
+14937: Create Project
+14649: Project Template
+14725: Create New Project
+14923: Create New Project (Blank Template)
+14654: Project Manager
+14737: View Draft Project
+14652: Project",Use Case
+14720,Manage Project Resources,Firefly,"","14754: Manage Project Resources - Technical Reviewer
+14744: Manage Project Resources - Branch Chief
+14726: Manage Project Resources - Project Manager",Use Case
+14756,Manage Project Escalations,Firefly,"","14938: Designated Project Manager
+14898: Escalation
+14654: Project Manager
+14934: Escalation Executive
+14656: Technical Reviewer
+14856: Manage Project Escalations",Use Case
+14757,Request Review,Firefly,"","14938: Designated Project Manager
+14894: Project Support
+14763: Request Review
+14654: Project Manager
+14652: Project",Use Case
+14791,View Firefly Notifications (Dashboard),Firefly,"","14940: Notifications
+14870: View Firefly Notifications (Dashboard) - Admin
+14864: View Firefly Notifications (Dashboard) - Branch Chief
+14867: View Firefly Notifications (Dashboard) - Technical Reviewer
+14860: View Firefly Notifications (Dashboard) - Project Manager
+14879: Create Notification
+14891: Notification",Use Case
+14795,Manage Firefly Reports,Firefly,"",14928: Create Firefly Reports,Use Case
+14796,View Project Comments,Firefly,"","14919: View Project Comments
+14832: Comments Tab
+14694: Comment",Use Case
+14797,Manage Project Templates,Firefly,"","14839: Schedule Priority
+14649: Project Template
+14651: Review Milestone Template
+14851: Manage Project Templates
+14885: Manage Project Templates
+14657: Admin
+14650: Project Milestone Template
+14695: Schedule Priority",Use Case
+14798,Manage Roles,Firefly,"","3379: Role
+14847: Manage Roles
+14884: Manage Roles
+3674: User
+14657: Admin",Use Case
+14800,View Firefly Documents in ADAMS,Firefly,"","14915: View Firefly Documents in ADAMS
+14700: ADAMS Document",Use Case
+14814,Check-In Review Comments,Firefly,"","14690: Review
+14908: Check-In Review Comment
+14829: Milestones Tab
+14656: Technical Reviewer",Use Case
